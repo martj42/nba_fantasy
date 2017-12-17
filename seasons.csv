@@ -59,32 +59,32 @@ season,position,team,manager,w,l,d
 2013,10,Team Loo,Tiit Loo,83,100,1
 2013,11,KK Tornaado,Asso Viiding,74,109,1
 2013,12,Team EpicMealTime,Tanel Teder,69,111,4
-2012,1,NA,Mart Jürisoo,NA,NA,NA
-2012,2,NA,Heigo Randma,NA,NA,NA
-2012,3,NA,Joonas Rihma,NA,NA,NA
-2012,NA,NA,Roger Krinpus,NA,NA,NA
-2012,NA,NA,Kristo Krinpus,NA,NA,NA
-2012,NA,NA,Valmar Raigo,NA,NA,NA
-2012,NA,NA,Tiit Loo,NA,NA,NA
-2012,NA,NA,Asso Viiding,NA,NA,NA
-2011,1,NA,Mikk Soone,NA,NA,NA
-2011,2,NA,Mart Jürisoo,NA,NA,NA
-2011,NA,NA,Asso Viiding,NA,NA,NA
-2011,NA,NA,Roger Krinpus,NA,NA,NA
-2011,NA,NA,Kristo Krinpus,NA,NA,NA
-2011,NA,NA,Joonas Rihma,NA,NA,NA
-2011,NA,NA,Mart Kullamaa,NA,NA,NA
-2011,NA,NA,Mihkel Krusberg,NA,NA,NA
-2011,NA,NA,Roland,NA,NA,NA
-2011,NA,NA,Valmar Raigo,NA,NA,NA
-2011,NA,NA,Urmas,NA,NA,NA
-2011,NA,NA,Tiit Loo,NA,NA,NA
-2010,1,NA,Mikk Soone,NA,NA,NA
-2010,3,NA,Mart Jürisoo,NA,NA,NA
-2010,NA,NA,Joonas Rihma,NA,NA,NA
-2010,NA,NA,Roger Krinpus,NA,NA,NA
-2010,NA,NA,Kristo Krinpus,NA,NA,NA
-2010,NA,NA,Roland,NA,NA,NA
+2012,1,Marek Doronini All-Starid,Mart Jürisoo,NA,NA,NA
+2012,2,Los Labidos,Heigo Randma,NA,NA,NA
+2012,3,Klubi Kõik Rihmaks,Joonas Rihma,NA,NA,NA
+2012,NA,Laki Lakid,Roger Krinpus,NA,NA,NA
+2012,NA,BC Kluiverson,Kristo Krinpus,NA,NA,NA
+2012,NA,Ämari Nastikud,Valmar Raigo,NA,NA,NA
+2012,NA,Team Tarmo Laane,Tiit Loo,NA,NA,NA
+2012,NA,KK Tornaado,Asso Viiding,NA,NA,NA
+2011,1,Team Soone,Mikk Soone,NA,NA,NA
+2011,2,Marek Doronini All-Starid,Mart Jürisoo,NA,NA,NA
+2011,NA,KK Tornaado,Asso Viiding,NA,NA,NA
+2011,NA,Laki Lakid,Roger Krinpus,NA,NA,NA
+2011,NA,BC Kluiverson,Kristo Krinpus,NA,NA,NA
+2011,NA,Klubi Kõikon Rihmad,Joonas Rihma,NA,NA,NA
+2011,NA,Team Kullamaa,Mart Kullamaa,NA,NA,NA
+2011,NA,Metsanurga Murusystem,Mihkel Krusberg,NA,NA,NA
+2011,NA,Ð‘Ðš ÐœÐ¸ÑˆÐ°,Roland,NA,NA,NA
+2011,NA,FC Ämari United,Valmar Raigo,NA,NA,NA
+2011,NA,BC Paeluss,Urmas,NA,NA,NA
+2011,NA,FC Tarmo Laane,Tiit Loo,NA,NA,NA
+2010,1,Team Soone,Mikk Soone,NA,NA,NA
+2010,3,Marek Doronini All-Starid,Mart Jürisoo,NA,NA,NA
+2010,NA,Rihmad Paadis,Joonas Rihma,NA,NA,NA
+2010,NA,Korv Pall,Roger Krinpus,NA,NA,NA
+2010,NA,BC Kluiverson,Kristo Krinpus,NA,NA,NA
+2010,NA,Cardington - Lincoln Pirates,Roland,NA,NA,NA
 2010,NA,NA,Martin Šmutov,NA,NA,NA
 2010,NA,NA,Ants Mängel,NA,NA,NA
 2009,1,NA,Martin Šmutov,NA,NA,NA
@@ -95,21 +95,21 @@ season,position,team,manager,w,l,d
 2009,NA,NA,Kristo Krinpus,NA,NA,NA
 2009,NA,NA,Märt Uuemaa,NA,NA,NA
 2009,NA,NA,Ants Mängel,NA,NA,NA
-2008,9,NA,Mart Jürisoo,NA,NA,NA
-2008,NA,NA,Roger Krinpus,NA,NA,NA
-2008,NA,NA,Kristo Krinpus,NA,NA,NA
-2008,10,NA,Harro Rannamets,NA,NA,NA
-2008,1,NA,Tanel Teder,NA,NA,NA
+2008,9,Gilbert Arenase All-Starid,Mart Jürisoo,NA,NA,NA
+2008,NA,Tupsununnud,Roger Krinpus,NA,NA,NA
+2008,NA,BC Kluiverson,Kristo Krinpus,NA,NA,NA
+2008,10,Argentiina Asotsiaalid,Harro Rannamets,NA,NA,NA
+2008,1,BC Rakvere Tarvas,Tanel Teder,NA,NA,NA
 2008,NA,NA,Riho,NA,NA,NA
-2008,NA,NA,Mikk Soone,NA,NA,NA
-2008,NA,NA,Märt Uuemaa,NA,NA,NA
-2008,NA,NA,Joonas Rihma,NA,NA,NA
-2008,NA,NA,Roland,NA,NA,NA
-2007,NA,NA,Mart Jürisoo,NA,NA,NA
-2007,NA,NA,Roger Krinpus,NA,NA,NA
-2007,NA,NA,Kristo Krinpus,NA,NA,NA
-2007,NA,NA,Harro Rannamets,NA,NA,NA
-2007,1,NA,Joonas Rihma,NA,NA,NA
-2007,NA,NA,Mikk Soone,NA,NA,NA
-2007,NA,NA,Ants Mängel,NA,NA,NA
-2007,NA,NA,Märt Uuemaa,NA,NA,NA
+2008,NA,Team LeBron,Mikk Soone,NA,NA,NA
+2008,NA,Tusma Lendav Tsirkus,Märt Uuemaa,NA,NA,NA
+2008,NA,Team Called Piim,Joonas Rihma,NA,NA,NA
+2008,NA,Päkapikkude armee,Roland,NA,NA,NA
+2007,NA,1 2 3,Mart Jürisoo,NA,NA,NA
+2007,NA,Muhvid Siblivad Alati Ringi,Roger Krinpus,NA,NA,NA
+2007,NA,BC Kluiverson,Kristo Krinpus,NA,NA,NA
+2007,NA,BC Maja Oja Ääres,Harro Rannamets,NA,NA,NA
+2007,1,New York Knicks 2020,Joonas Rihma,NA,NA,NA
+2007,NA,Team LeBron,Mikk Soone,NA,NA,NA
+2007,NA,KK Valige Siim Kallas,Ants Mängel,NA,NA,NA
+2007,NA,Tusma Lendav Tsirkus,Märt Uuemaa,NA,NA,NA
