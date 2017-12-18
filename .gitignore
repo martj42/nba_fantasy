@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+index.Rmd
+nba_fantasy.Rproj
+projections/
+player_rater/
+sandbox*
+auction*
+todo.txt
+*.jpg
