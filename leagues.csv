@@ -1,13 +1,13 @@
-season,name
-2018,Zipsiku Liiga
-2017,O-Si-Nene Liiga
-2016,Jabari vigastuste liiga
-2015,Devin Harris on naljakas
-2014,Kes on Kentavious Caldwell-Pope?
-2013,Vucevici Gangnam-liiga
-2012,Nowitzki-armastuse liiga
-2011,Duranti gay-armastuse liiga
-2010,Meie Fantasy
-2009,NA
-2008,Tartu Rocki fänniklubi
-2007,Hip-Hop Elustiil
+Season,Name,Host,Draft
+2018,Zipsiku Liiga,ESPN,auction
+2017,O-Si-Nene Liiga,ESPN,auction
+2016,Jabari vigastuste liiga,ESPN,auction
+2015,Devin Harris on naljakas,ESPN,auction
+2014,Kes on Kentavious Caldwell-Pope?,ESPN,auction
+2013,Vucevici Gangnam-liiga,ESPN,auction
+2012,Nowitzki-armastuse liiga,ESPN,auction
+2011,Duranti gay-armastuse liiga,ESPN,auction
+2010,Meie Fantasy,ESPN,
+2009,"Me armastame sind, ESPN!",ESPN,
+2008,Tartu Rocki fänniklubi,NBA.com,snake
+2007,Hip-Hop Elustiil,NBA.com,snake
