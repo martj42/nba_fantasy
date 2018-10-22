@@ -1,139 +1,139 @@
 season,position,team,manager,w,l,d
-2019,NA,BC Kluiverson,Kristo Krinpus,NA,NA,NA
-2019,NA,Jinglin' Joe,Freddy Haljandi,NA,NA,NA
-2019,NA,KK Tornaado,Asso Viiding,NA,NA,NA
-2019,NA,Korvpallikool Majakas,Kaspar Komissarov,NA,NA,NA
-2019,NA,Los Labidos,Heigo Randma,NA,NA,NA
-2019,NA,Poola Haamer,Priit Evart,NA,NA,NA
-2019,NA,Saaremaa Laevakompanii,Priit Aavik,NA,NA,NA
-2019,NA,Seattle SuperSonics,Mart Jürisoo,NA,NA,NA
-2019,NA,Team SaareKaru,Immo Ilmjärv,NA,NA,NA
-2019,NA,Telliskivi Maks & Mooric,Horre Vahe,NA,NA,NA
-2019,NA,Uues kuues Pingud,Roger Krinpus,NA,NA,NA
-2019,NA,Werneri Gang,Werner Armulik,NA,NA,NA
-2018,1,KK Tornaado,Asso Viiding,122,76,0
-2018,6,Saare Karu,Immo Ilmjärv,102,95,1
-2018,4,Seattle SuperSonics,Mart Jürisoo,105,91,2
-2018,2,Los Labidos,Heigo Randma,117,79,2
-2018,11,Tiim Pingu,Roger Krinpus,75,120,3
-2018,5,Swaggy P,Freddy Haljandi,103,91,4
-2018,8,Poola Haamer,Priit Evart,100,95,3
-2018,9,Korvpallikool Majakas,Kaspar Komissarov,95,101,2
-2018,10,Laagri Maffiosod,Johann Lents,83,114,1
-2018,7,BC East-Kluiverson,Kristo Krinpus,100,94,4
-2018,12,Saaremaa Laevakompanii,Priit Aavik,65,132,1
-2018,3,Werneri Gang,Werner Armulik,108,87,3
-2017,1,KK Tornaado,Asso Viiding,101,68,7
-2017,2,Saare Karu,Immo Ilmjärv,93,79,4
-2017,3,Seattle SuperSonics,Mart Jürisoo,91,83,2
-2017,4,Los Labidos,Heigo Randma,90,85,1
-2017,5,Tiim Pingu,Roger Krinpus,87,83,6
-2017,6,Swaggy P,Freddy Haljandi,87,87,2
-2017,7,Poola Haamer,Priit Evart,84,88,4
-2017,8,Korvpallikool Majakas,Kaspar Komissarov,83,89,4
-2017,9,Vancouver Grizzlies,Joonas Rihma,81,92,3
-2017,10,BC Kluiverson,Kristo Krinpus,82,93,1
-2017,11,Saaremaa Laevakompanii,Priit Aavik,80,92,4
-2017,12,Werneri Gang,Werner Armulik,76,96,4
-2016,1,Saare Karu,Immo Ilmjärv,107,67,2
-2016,2,Los Labidos,Heigo Randma,107,67,2
-2016,3,Vancouver Grizzlies,Joonas Rihma,103,71,2
-2016,4,Poola Haamer,Priit Evart,94,79,3
-2016,5,Mighty Sledgehammers,Priit Aavik,92,82,2
-2016,6,Richmond Tigers,Werner Armulik,86,83,7
-2016,7,KK Tornaado,Asso Viiding,84,87,5
-2016,8,Tiim Pingu,Roger Krinpus,83,89,4
-2016,9,BC Kluiverson,Kristo Krinpus,81,93,2
-2016,10,Team Raigo,Valmar Raigo,69,103,4
-2016,11,Swaggy P,Freddy Haljandi,70,105,1
-2016,12,Korvpallikool Majakas,Kaspar Komissarov,62,112,2
-2015,1,Team Red Devils,Tanel Teder,106,66,4
-2015,2,Team Wolfpack,Priit Evart,106,67,3
-2015,3,Los Labidos,Heigo Randma,104,70,2
-2015,4,BC Kluiverson,Kristo Krinpus,93,82,1
-2015,5,KK Tornaado,Asso Viiding,91,83,2
-2015,6,Saare Karu,Immo Ilmjärv,89,83,4
-2015,7,Team Raigo,Valmar Raigo,85,86,5
-2015,8,Marek Doronini All-Starid,Mart Jürisoo,84,92,0
-2015,9,Estralia Sanatoorium,Freddy Haljandi,81,93,2
-2015,10,Tiim Pingu,Roger Krinpus,79,94,3
-2015,11,Oh Jah,Taavi Salm,68,107,1
-2015,12,Walla Walla Weasel Wackers,Priit Aavik,55,118,3
-2014,1,Lamar Odomi Diilerid,Freddy Haljandi,110,66,0
-2014,2,KK Välk,Mihkel Tammo,104,70,2
-2014,3,Los Labidos,Heigo Randma,103,71,2
-2014,4,BC Kluiverson,Kristo Krinpus,99,75,2
-2014,5,Saare Karu,Immo Ilmjärv,98,76,2
-2014,6,Marek Doronini All-Starid,Mart Jürisoo,84,90,2
-2014,7,Tiim Pingu,Roger Krinpus,83,92,1
-2014,8,Sõbra Soovitusel,Ott Mängel,82,93,1
-2014,9,Team Loo,Tiit Loo,74,97,5
-2014,10,KK Tornaado,Asso Viiding,75,99,2
-2014,11,Team Raigo,Valmar Raigo,69,103,4
-2014,12,Rapla Pehmod,Ants Mängel,61,110,5
-2013,1,Got Milk?,Joonas Rihma,124,59,1
-2013,2,Marek Doronini All-Starid,Mart Jürisoo,103,77,4
-2013,3,Los Labidos,Heigo Randma,98,82,4
-2013,4,Team Snorgeldajad,Erik Põlluveer,96,84,4
-2013,5,Tiim Pingu,Roger Krinpus,94,86,4
-2013,6,Team ValusKaotus,Ants Mängel,87,91,6
-2013,7,BC Kluiverson,Kristo Krinpus,86,93,5
-2013,8,Saare Karu,Immo Ilmjärv,87,94,3
-2013,9,Team Raigo,Valmar Raigo,82,97,5
-2013,10,Team Loo,Tiit Loo,83,100,1
-2013,11,KK Tornaado,Asso Viiding,74,109,1
-2013,12,Team EpicMealTime,Tanel Teder,69,111,4
-2012,1,Marek Doronini All-Starid,Mart Jürisoo,NA,NA,NA
-2012,2,Los Labidos,Heigo Randma,NA,NA,NA
-2012,3,Klubi Kõik Rihmaks,Joonas Rihma,NA,NA,NA
-2012,NA,Laki Lakid,Roger Krinpus,NA,NA,NA
-2012,NA,BC Kluiverson,Kristo Krinpus,NA,NA,NA
-2012,NA,Ämari Nastikud,Valmar Raigo,NA,NA,NA
-2012,NA,Team Tarmo Laane,Tiit Loo,NA,NA,NA
-2012,NA,KK Tornaado,Asso Viiding,NA,NA,NA
-2011,1,Team Soone,Mikk Soone,NA,NA,NA
-2011,2,Marek Doronini All-Starid,Mart Jürisoo,NA,NA,NA
-2011,NA,KK Tornaado,Asso Viiding,NA,NA,NA
-2011,NA,Laki Lakid,Roger Krinpus,NA,NA,NA
-2011,NA,BC Kluiverson,Kristo Krinpus,NA,NA,NA
-2011,NA,Klubi Kõikon Rihmad,Joonas Rihma,NA,NA,NA
-2011,NA,Team Kullamaa,Mart Kullamaa,NA,NA,NA
-2011,NA,Metsanurga Murusystem,Mihkel Krusberg,NA,NA,NA
-2011,NA,Ð‘Ðš ÐœÐ¸ÑˆÐ°,Roland Vares,NA,NA,NA
-2011,NA,FC Ämari United,Valmar Raigo,NA,NA,NA
-2011,NA,BC Paeluss,Urmas Hallik,NA,NA,NA
-2011,NA,FC Tarmo Laane,Tiit Loo,NA,NA,NA
-2010,1,Team Soone,Mikk Soone,NA,NA,NA
-2010,3,Marek Doronini All-Starid,Mart Jürisoo,NA,NA,NA
-2010,NA,Rihmad Paadis,Joonas Rihma,NA,NA,NA
-2010,NA,Korv Pall,Roger Krinpus,NA,NA,NA
-2010,NA,BC Kluiverson,Kristo Krinpus,NA,NA,NA
-2010,NA,Cardington - Lincoln Pirates,Roland Vares,NA,NA,NA
-2010,NA,NA,Martin Šmutov,NA,NA,NA
-2010,NA,NA,Ants Mängel,NA,NA,NA
-2009,1,NA,Martin Šmutov,NA,NA,NA
-2009,NA,Marek Doronini All-Starid,Mart Jürisoo,NA,NA,NA
-2009,NA,Sõpaka Snaiprid,Mikk Soone,NA,NA,NA
-2009,NA,Team Piim,Joonas Rihma,NA,NA,NA
-2009,NA,Kuri Kass,Roger Krinpus,NA,NA,NA
-2009,NA,BC Kluiverson,Kristo Krinpus,NA,NA,NA
-2009,NA,Tusma Lendav Tsirkus,Märt Uuemaa,NA,NA,NA
-2009,NA,NA,Ants Mängel,NA,NA,NA
-2008,1,BC Rakvere Tarvas,Tanel Teder,NA,NA,NA
-2008,9,Gilbert Arenase All-Starid,Mart Jürisoo,NA,NA,NA
-2008,10,Argentiina Asotsiaalid,Harro Rannamets,NA,NA,NA
-2008,NA,Tupsununnud,Roger Krinpus,NA,NA,NA
-2008,NA,BC Kluiverson,Kristo Krinpus,NA,NA,NA
-2008,NA,BC Vaablane,Riho Saamel,NA,NA,NA
-2008,NA,Team LeBron,Mikk Soone,NA,NA,NA
-2008,NA,Tusma Lendav Tsirkus,Märt Uuemaa,NA,NA,NA
-2008,NA,Team Called Piim,Joonas Rihma,NA,NA,NA
-2008,NA,Päkapikkude Armee,Roland Vares,NA,NA,NA
-2007,1,New York Knicks 2020,Joonas Rihma,113,75,4
-2007,2,BC Maja Oja Ääres,Harro Rannamets,106,84,2
-2007,3,Mart Jürisoo,Mart Jürisoo,103,87,2
-2007,4,BC Kluiverson,Kristo Krinpus,98,93,1
-2007,5,Roger nr11,Roger Krinpus,93,97,2
-2007,6,Team LeBron,Mikk Soone,90,100,2
-2007,7,Tusma Lendav Tsirkus,Märt Uuemaa,85,106,1
-2007,8,KK Valige Siim Kallas,Ants Mängel,72,118,2
+2019,3,BC Kluiverson,Kristo K.,5,4,0
+2019,3,Jinglin' Joe,Freddy H.,5,4,0
+2019,8,KK Tornaado,Asso V.,4,5,0
+2019,2,Korvpallikool Majakas,Kaspar K.,7,2,0
+2019,1,Los Labidos,Heigo R.,8,1,0
+2019,11,Poola Haamer,Priit E.,2,7,0
+2019,12,Saaremaa Laevakompanii,Priit A.,1,8,0
+2019,3,Seattle SuperSonics,Mart J.,5,4,0
+2019,8,SaareKaru,Immo I.,4,5,0
+2019,6,Telliskivi Maks & Mooric,Horre V.,4,4,1
+2019,6,Uues kuues Pingud,Roger K.,4,4,1
+2019,8,Werneri Gang,Werner A.,4,5,0
+2018,1,KK Tornaado,Asso V.,122,76,0
+2018,6,Saare Karu,Immo I.,102,95,1
+2018,4,Seattle SuperSonics,Mart J.,105,91,2
+2018,2,Los Labidos,Heigo R.,117,79,2
+2018,11,Tiim Pingu,Roger K.,75,120,3
+2018,5,Swaggy P,Freddy H.,103,91,4
+2018,8,Poola Haamer,Priit E.,100,95,3
+2018,9,Korvpallikool Majakas,Kaspar K.,95,101,2
+2018,10,Laagri Maffiosod,Johann L.,83,114,1
+2018,7,BC East-Kluiverson,Kristo K.,100,94,4
+2018,12,Saaremaa Laevakompanii,Priit A.,65,132,1
+2018,3,Werneri Gang,Werner A.,108,87,3
+2017,1,KK Tornaado,Asso V.,101,68,7
+2017,2,Saare Karu,Immo I.,93,79,4
+2017,3,Seattle SuperSonics,Mart J.,91,83,2
+2017,4,Los Labidos,Heigo R.,90,85,1
+2017,5,Tiim Pingu,Roger K.,87,83,6
+2017,6,Swaggy P,Freddy H.,87,87,2
+2017,7,Poola Haamer,Priit E.,84,88,4
+2017,8,Korvpallikool Majakas,Kaspar K.,83,89,4
+2017,9,Vancouver Grizzlies,Joonas R.,81,92,3
+2017,10,BC Kluiverson,Kristo K.,82,93,1
+2017,11,Saaremaa Laevakompanii,Priit A.,80,92,4
+2017,12,Werneri Gang,Werner A.,76,96,4
+2016,1,Saare Karu,Immo I.,107,67,2
+2016,2,Los Labidos,Heigo R.,107,67,2
+2016,3,Vancouver Grizzlies,Joonas R.,103,71,2
+2016,4,Poola Haamer,Priit E.,94,79,3
+2016,5,Mighty Sledgehammers,Priit A.,92,82,2
+2016,6,Richmond Tigers,Werner A.,86,83,7
+2016,7,KK Tornaado,Asso V.,84,87,5
+2016,8,Tiim Pingu,Roger K.,83,89,4
+2016,9,BC Kluiverson,Kristo K.,81,93,2
+2016,10,Team Raigo,Valmar R.,69,103,4
+2016,11,Swaggy P,Freddy H.,70,105,1
+2016,12,Korvpallikool Majakas,Kaspar K.,62,112,2
+2015,1,Team Red Devils,Tanel T.,106,66,4
+2015,2,Team Wolfpack,Priit E.,106,67,3
+2015,3,Los Labidos,Heigo R.,104,70,2
+2015,4,BC Kluiverson,Kristo K.,93,82,1
+2015,5,KK Tornaado,Asso V.,91,83,2
+2015,6,Saare Karu,Immo I.,89,83,4
+2015,7,Team Raigo,Valmar R.,85,86,5
+2015,8,Marek Doronini All-Starid,Mart J.,84,92,0
+2015,9,Estralia Sanatoorium,Freddy H.,81,93,2
+2015,10,Tiim Pingu,Roger K.,79,94,3
+2015,11,Oh Jah,Taavi S.,68,107,1
+2015,12,Walla Walla Weasel Wackers,Priit A.,55,118,3
+2014,1,Lamar Odomi Diilerid,Freddy H.,110,66,0
+2014,2,KK Välk,Mihkel T.,104,70,2
+2014,3,Los Labidos,Heigo R.,103,71,2
+2014,4,BC Kluiverson,Kristo K.,99,75,2
+2014,5,Saare Karu,Immo I.,98,76,2
+2014,6,Marek Doronini All-Starid,Mart J.,84,90,2
+2014,7,Tiim Pingu,Roger K.,83,92,1
+2014,8,Sõbra Soovitusel,Ott M.,82,93,1
+2014,9,Team Loo,Tiit L.,74,97,5
+2014,10,KK Tornaado,Asso V.,75,99,2
+2014,11,Team Raigo,Valmar R.,69,103,4
+2014,12,Rapla Pehmod,Ants M.,61,110,5
+2013,1,Got Milk?,Joonas R.,124,59,1
+2013,2,Marek Doronini All-Starid,Mart J.,103,77,4
+2013,3,Los Labidos,Heigo R.,98,82,4
+2013,4,Team Snorgeldajad,Erik P.,96,84,4
+2013,5,Tiim Pingu,Roger K.,94,86,4
+2013,6,Team ValusKaotus,Ants M.,87,91,6
+2013,7,BC Kluiverson,Kristo K.,86,93,5
+2013,8,Saare Karu,Immo I.,87,94,3
+2013,9,Team Raigo,Valmar R.,82,97,5
+2013,10,Team Loo,Tiit L.,83,100,1
+2013,11,KK Tornaado,Asso V.,74,109,1
+2013,12,Team EpicMealTime,Tanel T.,69,111,4
+2012,1,Marek Doronini All-Starid,Mart J.,NA,NA,NA
+2012,2,Los Labidos,Heigo R.,NA,NA,NA
+2012,3,Klubi Kõik Rihmaks,Joonas R.,NA,NA,NA
+2012,NA,Laki Lakid,Roger K.,NA,NA,NA
+2012,NA,BC Kluiverson,Kristo K.,NA,NA,NA
+2012,NA,Ämari Nastikud,Valmar R.,NA,NA,NA
+2012,NA,Team Tarmo Laane,Tiit L.,NA,NA,NA
+2012,NA,KK Tornaado,Asso V.,NA,NA,NA
+2011,1,Team Soone,Mikk S.,NA,NA,NA
+2011,2,Marek Doronini All-Starid,Mart J.,NA,NA,NA
+2011,NA,KK Tornaado,Asso V.,NA,NA,NA
+2011,NA,Laki Lakid,Roger K.,NA,NA,NA
+2011,NA,BC Kluiverson,Kristo K.,NA,NA,NA
+2011,NA,Klubi Kõikon Rihmad,Joonas R.,NA,NA,NA
+2011,NA,Team Kullamaa,Mart K.,NA,NA,NA
+2011,NA,Metsanurga Murusystem,Mihkel K.,NA,NA,NA
+2011,NA,Ð‘Ðš ÐœÐ¸ÑˆÐ°,Roland V.,NA,NA,NA
+2011,NA,FC Ämari United,Valmar R.,NA,NA,NA
+2011,NA,BC Paeluss,Urmas H.,NA,NA,NA
+2011,NA,FC Tarmo Laane,Tiit L.,NA,NA,NA
+2010,1,Team Soone,Mikk S.,NA,NA,NA
+2010,3,Marek Doronini All-Starid,Mart J.,NA,NA,NA
+2010,NA,Rihmad Paadis,Joonas R.,NA,NA,NA
+2010,NA,Korv Pall,Roger K.,NA,NA,NA
+2010,NA,BC Kluiverson,Kristo K.,NA,NA,NA
+2010,NA,Cardington - Lincoln Pirates,Roland V.,NA,NA,NA
+2010,NA,NA,Martin Š.,NA,NA,NA
+2010,NA,NA,Ants M.,NA,NA,NA
+2009,1,NA,Martin Š.,NA,NA,NA
+2009,NA,Marek Doronini All-Starid,Mart J.,NA,NA,NA
+2009,NA,Sõpaka Snaiprid,Mikk S.,NA,NA,NA
+2009,NA,Team Piim,Joonas R.,NA,NA,NA
+2009,NA,Kuri Kass,Roger K.,NA,NA,NA
+2009,NA,BC Kluiverson,Kristo K.,NA,NA,NA
+2009,NA,Tusma Lendav Tsirkus,Märt U.,NA,NA,NA
+2009,NA,NA,Ants M.,NA,NA,NA
+2008,1,BC Rakvere Tarvas,Tanel T.,NA,NA,NA
+2008,9,Gilbert Arenase All-Starid,Mart J.,NA,NA,NA
+2008,10,Argentiina Asotsiaalid,Harro R.,NA,NA,NA
+2008,NA,Tupsununnud,Roger K.,NA,NA,NA
+2008,NA,BC Kluiverson,Kristo K.,NA,NA,NA
+2008,NA,BC Vaablane,Riho S.,NA,NA,NA
+2008,NA,Team LeBron,Mikk S.,NA,NA,NA
+2008,NA,Tusma Lendav Tsirkus,Märt U.,NA,NA,NA
+2008,NA,Team Called Piim,Joonas R.,NA,NA,NA
+2008,NA,Päkapikkude Armee,Roland V.,NA,NA,NA
+2007,1,New York Knicks 2020,Joonas R.,113,75,4
+2007,2,BC Maja Oja Ääres,Harro R.,106,84,2
+2007,3,Mart Jürisoo,Mart J.,103,87,2
+2007,4,BC Kluiverson,Kristo K.,98,93,1
+2007,5,Roger nr11,Roger K.,93,97,2
+2007,6,Team LeBron,Mikk S.,90,100,2
+2007,7,Tusma Lendav Tsirkus,Märt U.,85,106,1
+2007,8,KK Valige Siim Kallas,Ants M.,72,118,2
