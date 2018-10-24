@@ -1,14 +1,14 @@
-Season,Name,Host,Draft
-2019,Kes teab?,Fantrax,auction
-2018,Zipsiku Liiga,ESPN,auction
-2017,O-Si-Nene Liiga,ESPN,auction
-2016,Jabari vigastuste liiga,ESPN,auction
-2015,Devin Harris on naljakas,ESPN,auction
-2014,Kes on Kentavious Caldwell-Pope?,ESPN,auction
-2013,Vucevici Gangnam-liiga,ESPN,auction
-2012,Nowitzki-armastuse liiga,ESPN,auction
-2011,Duranti gay-armastuse liiga,ESPN,auction
-2010,Meie Fantasy,ESPN,auction
-2009,"Me armastame sind, ESPN!",ESPN,snake
-2008,Tartu Rocki fänniklubi,NBA.com,snake
-2007,Hip-Hop Elustiil,NBA.com,snake
+Season,Name,Host,Draft, Cats, Roster, Lineups
+2019,Kes teab?,Fantrax,auction,9,15,
+2018,Zipsiku Liiga,ESPN,auction,9,15,
+2017,O-Si-Nene Liiga,ESPN,auction,8,13,
+2016,Jabari vigastuste liiga,ESPN,auction,8,13,
+2015,Devin Harris on naljakas,ESPN,auction,8,13,
+2014,Kes on Kentavious Caldwell-Pope?,ESPN,auction,8,13,
+2013,Vucevici Gangnam-liiga,ESPN,auction,8,13,
+2012,Nowitzki-armastuse liiga,ESPN,auction,8,13,
+2011,Duranti gay-armastuse liiga,ESPN,auction,8,13,
+2010,Meie Fantasy,ESPN,auction,8,13,
+2009,"Me armastame sind, ESPN!",ESPN,snake,8,13,
+2008,Tartu Rocki fänniklubi,NBA.com,snake,8,12,
+2007,Hip-Hop Elustiil,NBA.com,snake,8,10,
