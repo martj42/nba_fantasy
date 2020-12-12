@@ -1,4 +1,160 @@
 Manager,Player,Team,Position,Price,Season
+Immo Ilmjärv,LaMelo Ball,CHA,PG,7,2021
+Kaspar Komissarov,Kevin Durant,BKN,SF,39,2021
+Valmar Raigo,Luka Doncic,DAL,SF,58,2021
+Heigo Randma,Al Horford,OKC,C,10,2021
+Werner Armulik,LeBron James,LAL,SF,44,2021
+Johann Lents,James Harden,HOU,SG,65,2021
+Kaspar Komissarov,Nikola Jokic,DEN,PF,52,2021
+Freddy Haljandi,John Wall,HOU,PG,14,2021
+Werner Armulik,Russell Westbrook,WAS,PG,38,2021
+Immo Ilmjärv,Ben Simmons,PHI,PF,31,2021
+Asso Viiding,Damian Lillard,POR,PG,57,2021
+Heigo Randma,Giannis Antetokounmpo,MIL,SF,58,2021
+Freddy Haljandi,Robert Covington,POR,PF,16,2021
+Freddy Haljandi,Kawhi Leonard,LAC,SF,42,2021
+Priit Evart,Anthony Davis,LAL,PF,60,2021
+Johann Lents,Gordon Hayward,CHA,SG,16,2021
+Mart Jürisoo,Stephen Curry,GSW,PG,48,2021
+Valmar Raigo,Karl-Anthony Towns,MIN,C,54,2021
+Mart Jürisoo,Devin Booker,PHX,SG,44,2021
+Asso Viiding,Trae Young,ATL,PG,42,2021
+Immo Ilmjärv,Donovan Mitchell,UTA,SG,31,2021
+Werner Armulik,Paul George,LAC,SF,30,2021
+Heigo Randma,Kyrie Irving,BKN,PG,33,2021
+Priit Evart,Shai Gilgeous-Alexander,OKC,PG,27,2021
+Kristo Krinpus,Tyler Herro,MIA,SG,10,2021
+Asso Viiding,Andre Drummond,CLE,C,20,2021
+Werner Armulik,Zach LaVine,CHI,PG,23,2021
+Heigo Randma,Blake Griffin,DET,PF,11,2021
+Kaspar Komissarov,Jamal Murray,DEN,SG,25,2021
+Kristo Krinpus,Ja Morant,MEM,PG,29,2021
+Immo Ilmjärv,Domantas Sabonis,IND,C,27,2021
+Werner Armulik,Jayson Tatum,BOS,SF,41,2021
+Kristo Krinpus,Zion Williamson,NOP,PF,20,2021
+Freddy Haljandi,Pascal Siakam,TOR,C,29,2021
+Freddy Haljandi,Jimmy Butler,MIA,SG,35,2021
+Roger Krinpus,Joel Embiid,PHI,C,40,2021
+Priit Evart,Luguentz Dort,OKC,SG,6,2021
+Johann Lents,Chris Paul,PHX,PG,22,2021
+Immo Ilmjärv,Bradley Beal,WAS,SG,28,2021
+Priit Evart,LaMarcus Aldridge,SAS,PF,20,2021
+Kaspar Komissarov,Kristaps Porzingis,DAL,PF,20,2021
+Roger Krinpus,Brandon Ingram,NOP,PF,24,2021
+Johann Lents,Deandre Ayton,PHX,C,36,2021
+Heigo Randma,Bam Adebayo,MIA,C,37,2021
+Asso Viiding,DeMar DeRozan,SAS,SG,22,2021
+Roger Krinpus,CJ McCollum,POR,PG,27,2021
+Roger Krinpus,De'Aaron Fox,SAC,PG,27,2021
+Kristo Krinpus,Rudy Gobert,UTA,C,24,2021
+Kristo Krinpus,Coby White,CHI,SG,7,2021
+Roger Krinpus,Khris Middleton,MIL,SF,31,2021
+Asso Viiding,Nikola Vucevic,ORL,C,29,2021
+Johann Lents,Josh Richardson,DAL,SG,6,2021
+Priit Evart,Jaylen Brown,BOS,PF,23,2021
+Immo Ilmjärv,D'Angelo Russell,MIN,PG,15,2021
+Heigo Randma,Hassan Whiteside,SAC,PF,10,2021
+Immo Ilmjärv,John Collins,ATL,PF,27,2021
+Mart Jürisoo,TJ Warren,IND,SF,11,2021
+Priit Evart,Fred VanVleet,TOR,PG,18,2021
+Kaspar Komissarov,Jrue Holiday,MIL,PG,21,2021
+Freddy Haljandi,Clint Capela,ATL,C,11,2021
+Johann Lents,Lonzo Ball,NOP,PG,11,2021
+Valmar Raigo,Buddy Hield,SAC,SG,15,2021
+Heigo Randma,Kyle Lowry,TOR,PG,19,2021
+Mart Jürisoo,Jusuf Nurkic,POR,C,27,2021
+Valmar Raigo,Bogdan Bogdanovic,ATL,SG,11,2021
+Priit Evart,Kelly Oubre,GSW,SF,9,2021
+Valmar Raigo,Jaren Jackson,MEM,PF,10,2021
+Mart Jürisoo,Christian Wood,HOU,PF,17,2021
+Roger Krinpus,Collin Sexton,CLE,PG,8,2021
+Freddy Haljandi,Carmelo Anthony,POR,SF,2,2021
+Johann Lents,Myles Turner,IND,PF,13,2021
+Priit Evart,Devonte' Graham,CHA,PG,11,2021
+Kristo Krinpus,Michael Porter,DEN,PF,20,2021
+Immo Ilmjärv,Mitchell Robinson,NYK,C,11,2021
+Freddy Haljandi,Andrew Wiggins,GSW,SG,10,2021
+Werner Armulik,Tristan Thompson,BOS,PF,4,2021
+Kaspar Komissarov,Lauri Markkanen,CHI,PF,9,2021
+Kaspar Komissarov,Victor Oladipo,IND,SG,12,2021
+Immo Ilmjärv,Kevin Love,CLE,PF,12,2021
+Roger Krinpus,Malcolm Brogdon,IND,SG,15,2021
+Immo Ilmjärv,Montrezl Harrell,LAL,PF,4,2021
+Freddy Haljandi,Kemba Walker,BOS,PG,10,2021
+Roger Krinpus,Aaron Gordon,ORL,PF,7,2021
+Johann Lents,James Wiseman,GSW,C,3,2021
+Kristo Krinpus,Rui Hachimura,WAS,SF,5,2021
+Valmar Raigo,Draymond Green,GSW,SF,8,2021
+Kristo Krinpus,Tobias Harris,PHI,PF,23,2021
+Johann Lents,Eric Bledsoe,NOP,PG,9,2021
+Kaspar Komissarov,Julius Randle,NYK,PF,12,2021
+Mart Jürisoo,Jonas Valanciunas,MEM,C,19,2021
+Heigo Randma,Ricky Rubio,MIN,PG,8,2021
+Werner Armulik,Davis Bertans,WAS,PF,5,2021
+Kristo Krinpus,Dennis Schroder,LAL,PG,7,2021
+Freddy Haljandi,Terry Rozier,CHA,PG,3,2021
+Mart Jürisoo,Jarrett Allen,BKN,C,6,2021
+Werner Armulik,Steven Adams,NOP,C,5,2021
+Kristo Krinpus,PJ Washington,CHA,PF,5,2021
+Valmar Raigo,Otto Porter,CHI,SF,5,2021
+Priit Evart,Marcus Smart,BOS,PG,6,2021
+Johann Lents,OG Anunoby,TOR,SF,5,2021
+Roger Krinpus,Jerami Grant,DET,SF,8,2021
+Valmar Raigo,Dejounte Murray,SAS,PG,11,2021
+Asso Viiding,Norman Powell,TOR,SG,6,2021
+Roger Krinpus,Will Barton,DEN,SG,7,2021
+Mart Jürisoo,Brook Lopez,MIL,C,7,2021
+Mart Jürisoo,Bojan Bogdanovic,UTA,SG,7,2021
+Johann Lents,Danilo Gallinari,ATL,SF,5,2021
+Asso Viiding,Spencer Dinwiddie,BKN,PG,4,2021
+Kristo Krinpus,RJ Barrett,NYK,SG,6,2021
+Werner Armulik,Bol Bol,DEN,C,2,2021
+Werner Armulik,Obi Toppin,NYK,PF,1,2021
+Asso Viiding,Richaun Holmes,SAC,C,4,2021
+Kaspar Komissarov,Goran Dragic,MIA,PG,6,2021
+Valmar Raigo,Duncan Robinson,MIA,SG,6,2021
+Immo Ilmjärv,Joe Ingles,UTA,PF,1,2021
+Roger Krinpus,Marvin Bagley,SAC,PF,4,2021
+Valmar Raigo,Wendell Carter,CHI,C,10,2021
+Freddy Haljandi,Nemanja Bjelica,SAC,SF,1,2021
+Werner Armulik,Caris LeVert,BKN,PF,4,2021
+Heigo Randma,Thomas Bryant,WAS,C,9,2021
+Kristo Krinpus,Darius Garland,CLE,SG,1,2021
+Priit Evart,Brandon Clarke,MEM,PF,11,2021
+Valmar Raigo,Serge Ibaka,LAC,PF,2,2021
+Priit Evart,Mike Conley,UTA,PG,5,2021
+Kaspar Komissarov,Harrison Barnes,SAC,SF,1,2021
+Valmar Raigo,Mikal Bridges,PHX,SF,8,2021
+Immo Ilmjärv,Derrick Rose,DET,PG,1,2021
+Roger Krinpus,Dario Saric,PHX,SF,1,2021
+Asso Viiding,Elfrid Payton,NYK,PG,7,2021
+Freddy Haljandi,DeMarcus Cousins,HOU,C,3,2021
+Heigo Randma,Joe Harris,BKN,SG,1,2021
+Mart Jürisoo,Chris Boucher,TOR,PF,1,2021
+Kristo Krinpus,Aron Baynes,TOR,C,1,2021
+Priit Evart,Anthony Edwards,MIN,SG,3,2021
+Mart Jürisoo,Evan Fournier,ORL,SG,5,2021
+Johann Lents,Kyle Kuzma,LAL,PF,1,2021
+Kaspar Komissarov,Willie Cauley-Stein,DAL,C,1,2021
+Valmar Raigo,Derrick White,SAS,PG,1,2021
+Freddy Haljandi,Markelle Fultz,ORL,PG,7,2021
+Heigo Randma,Killian Hayes,DET,PG,2,2021
+Asso Viiding,Daniel Theis,BOS,C,1,2021
+Immo Ilmjärv,Lou Williams,LAC,PG,5,2021
+Mart Jürisoo,Donte DiVincenzo,MIL,SG,1,2021
+Priit Evart,Larry Nance,CLE,PF,1,2021
+Werner Armulik,Precious Achiuwa,MIA,SF,1,2021
+Johann Lents,Hamidou Diallo,OKC,SG,1,2021
+Kaspar Komissarov,Seth Curry,PHI,SG,1,2021
+Roger Krinpus,Juancho Hernangomez,MIN,PF,1,2021
+Mart Jürisoo,Dillon Brooks,MEM,SF,4,2021
+Asso Viiding,Maxi Kleber,DAL,PF,2,2021
+Werner Armulik,Darius Bazley,OKC,PF,1,2021
+Kaspar Komissarov,Marcus Morris,LAC,PF,1,2021
+Asso Viiding,Kendrick Nunn,MIA,PG,1,2021
+Heigo Randma,Cole Anthony,ORL,SG,1,2021
+Asso Viiding,Kevin Huerter,ATL,SG,1,2021
+Heigo Randma,Tyrese Haliburton,SAC,PG,1,2021
 Kristo Krinpus,Giannis Antetokounmpo,MIL,SF,63,2020
 Freddy Haljandi,James Harden,HOU,SG,67,2020
 Werner Armulik,Russell Westbrook,HOU,PG,38,2020
@@ -56,7 +212,7 @@ Kaspar Komissarov,Kevin Love,CLE,PF,13,2020
 Immo Ilmjärv,Devin Booker,PHX,SG,26,2020
 Asso Viiding,DeMar DeRozan,SAS,SG,18,2020
 Kristo Krinpus,Aaron Gordon,ORL,PF,14,2020
-Mart Jürisoo,Otto Porter Jr,CHI,SF,20,2020
+Mart Jürisoo,Otto Porter,CHI,SF,20,2020
 Mart Jürisoo,Josh Richardson,PHI,SG,13,2020
 Asso Viiding,Bojan Bogdanovic,UTA,SG,3,2020
 Kaspar Komissarov,Domantas Sabonis,IND,C,10,2020
@@ -91,18 +247,18 @@ Roger Krinpus,Derrick Favors,NOP,PF,10,2020
 Roger Krinpus,Andrew Wiggins,MIN,SG,4,2020
 Joonas Rihma,Serge Ibaka,TOR,PF,6,2020
 Priit Evart,Dario Saric,PHX,SF,6,2020
-Werner Armulik,Dennis Smith Jr,NYK,PG,5,2020
+Werner Armulik,Dennis Smith,NYK,PG,5,2020
 Heigo Randma,Victor Oladipo,IND,SG,6,2020
 Mart Jürisoo,Jonathan Isaac,ORL,PF,8,2020
 Priit Aavik,OG Anunoby,TOR,SF,3,2020
 Freddy Haljandi,Paul Millsap,DEN,PF,5,2020
-Heigo Randma,Kelly Oubre Jr,PHX,SF,7,2020
-Joonas Rihma,Jaren Jackson Jr,MEM,PF,18,2020
+Heigo Randma,Kelly Oubre,PHX,SF,7,2020
+Joonas Rihma,Jaren Jackson,MEM,PF,18,2020
 Werner Armulik,Brandon Ingram,NOP,PF,8,2020
 Mart Jürisoo,Gordon Hayward,BOS,SG,8,2020
 Werner Armulik,Lou Williams,LAC,PG,5,2020
 Joonas Rihma,Dejounte Murray,SAS,PG,6,2020
-Priit Evart,Marvin Bagley III,SAC,PF,17,2020
+Priit Evart,Marvin Bagley ,SAC,PF,17,2020
 Asso Viiding,Gary Harris,DEN,SG,5,2020
 Heigo Randma,JaVale McGee,LAL,C,6,2020
 Mart Jürisoo,Kelly Olynyk,MIA,C,4,2020
@@ -130,15 +286,15 @@ Kaspar Komissarov,Eric Gordon,HOU,SG,1,2020
 Mart Jürisoo,Miles Bridges,CHA,SF,8,2020
 Freddy Haljandi,Dewayne Dedmon,SAC,C,2,2020
 Kaspar Komissarov,Jaylen Brown,BOS,PF,5,2020
-Heigo Randma,Tim Hardaway Jr,DAL,SG,2,2020
-Joonas Rihma,Wendell Carter Jr,CHI,C,11,2020
+Heigo Randma,Tim Hardaway,DAL,SG,2,2020
+Joonas Rihma,Wendell Carter,CHI,C,11,2020
 Asso Viiding,Derrick Rose,DET,PG,2,2020
 Kristo Krinpus,Will Barton,DEN,SG,4,2020
 Kaspar Komissarov,Jabari Parker,ATL,SF,2,2020
 Immo Ilmjärv,Kyle Anderson,MEM,SF,1,2020
 Mart Jürisoo,Dwight Powell,DAL,PF,1,2020
 Kristo Krinpus,Malik Monk,CHA,SG,2,2020
-Kaspar Komissarov,Larry Nance Jr,CLE,PF,6,2020
+Kaspar Komissarov,Larry Nance,CLE,PF,6,2020
 Mart Jürisoo,Tomas Satoransky,CHI,PG,9,2020
 Kristo Krinpus,Alex Len,ATL,C,6,2020
 Joonas Rihma,Ish Smith,WAS,PG,1,2020
@@ -202,8 +358,8 @@ Freddy Haljandi,Joe Ingles,UTA,PF,11,2019
 Freddy Haljandi,Jabari Parker,CHI,SF,11,2019
 Freddy Haljandi,Lonzo Ball,LAL,PG,9,2019
 Freddy Haljandi,Tyreke Evans,IND,SF,7,2019
-Freddy Haljandi,Wendell Carter Jr,CHI,C,5,2019
-Freddy Haljandi,Marvin Bagley III,SAC,PF,4,2019
+Freddy Haljandi,Wendell Carter,CHI,C,5,2019
+Freddy Haljandi,Marvin Bagley ,SAC,PF,4,2019
 Freddy Haljandi,Derrick Rose,MIN,PG,3,2019
 Freddy Haljandi,Al-Farouq Aminu,POR,SF,3,2019
 Freddy Haljandi,Rudy Gay,SAS,SF,2,2019
@@ -213,17 +369,17 @@ Heigo Randma,Stephen Curry,GSW,PG,47,2019
 Heigo Randma,John Wall,WAS,PG,36,2019
 Heigo Randma,Jrue Holiday,NOP,PG,23,2019
 Heigo Randma,Jeff Teague,MIN,PG,21,2019
-Heigo Randma,Dennis Smith Jr,DAL,PG,15,2019
+Heigo Randma,Dennis Smith,DAL,PG,15,2019
 Heigo Randma,Serge Ibaka,TOR,PF,12,2019
 Heigo Randma,Nicolas Batum,CHA,SF,11,2019
 Heigo Randma,Nikola Mirotic,NOP,PF,8,2019
 Heigo Randma,Markelle Fultz,PHI,PG,8,2019
 Heigo Randma,Kent Bazemore,ATL,SG,6,2019
 Heigo Randma,Darren Collison,IND,PG,5,2019
-Heigo Randma,Jaren Jackson Jr,MEM,PF,3,2019
+Heigo Randma,Jaren Jackson,MEM,PF,3,2019
 Heigo Randma,Caris LeVert,BKN,PF,3,2019
 Heigo Randma,Kentavious Caldwell-Pope,LAL,SG,1,2019
-Heigo Randma,Kelly Oubre Jr,WAS,SF,1,2019
+Heigo Randma,Kelly Oubre,WAS,SF,1,2019
 Horre Vahe,Karl-Anthony Towns,MIN,C,59,2019
 Horre Vahe,Damian Lillard,POR,PG,45,2019
 Horre Vahe,Kyrie Irving,BOS,PG,34,2019
@@ -248,7 +404,7 @@ Immo Ilmjärv,Gary Harris,DEN,SG,17,2019
 Immo Ilmjärv,Hassan Whiteside,MIA,PF,14,2019
 Immo Ilmjärv,Steven Adams,OKC,C,13,2019
 Immo Ilmjärv,Kris Dunn,CHI,PG,12,2019
-Immo Ilmjärv,Tim Hardaway Jr,NYK,SG,9,2019
+Immo Ilmjärv,Tim Hardaway,NYK,SG,9,2019
 Immo Ilmjärv,Dennis Schroder,OKC,PG,8,2019
 Immo Ilmjärv,Allen Crabbe,BKN,SG,2,2019
 Immo Ilmjärv,Bobby Portis,CHI,PF,2,2019
@@ -287,11 +443,11 @@ Kristo Krinpus,Justin Jackson,SAC,SF,1,2019
 Mart Jürisoo,Rudy Gobert,UTA,C,38,2019
 Mart Jürisoo,Jimmy Butler,MIN,SG,31,2019
 Mart Jürisoo,Klay Thompson,GSW,SG,27,2019
-Mart Jürisoo,Otto Porter Jr,WAS,SF,25,2019
+Mart Jürisoo,Otto Porter,WAS,SF,25,2019
 Mart Jürisoo,Jayson Tatum,BOS,SF,20,2019
 Mart Jürisoo,Robert Covington,PHI,PF,16,2019
 Mart Jürisoo,Jarrett Allen,BKN,C,15,2019
-Mart Jürisoo,Larry Nance Jr,CLE,PF,7,2019
+Mart Jürisoo,Larry Nance,CLE,PF,7,2019
 Mart Jürisoo,Lauri Markkanen,CHI,PF,6,2019
 Mart Jürisoo,Dirk Nowitzki,DAL,PF,6,2019
 Mart Jürisoo,JJ Redick,PHI,SG,4,2019
@@ -406,7 +562,7 @@ Heigo Randma,Jerami Grant,OKC,SF,1,2018
 Heigo Randma,John Collins,ATL,PF,1,2018
 Immo Ilmjärv,Rudy Gobert,UTA,C,45,2018
 Immo Ilmjärv,Draymond Green,GSW,SF,33,2018
-Immo Ilmjärv,Otto Porter Jr,WAS,SF,23,2018
+Immo Ilmjärv,Otto Porter,WAS,SF,23,2018
 Immo Ilmjärv,Ricky Rubio,UTA,PG,22,2018
 Immo Ilmjärv,Blake Griffin,LAC,PF,20,2018
 Immo Ilmjärv,Avery Bradley,DET,SG,12,2018
@@ -457,7 +613,7 @@ Kristo Krinpus,Jae Crowder,CLE,SF,14,2018
 Kristo Krinpus,Nikola Vucevic,ORL,C,14,2018
 Kristo Krinpus,Derrick Rose,CLE,PG,11,2018
 Kristo Krinpus,Evan Fournier,ORL,SG,10,2018
-Kristo Krinpus,Tim Hardaway Jr,NYK,SG,9,2018
+Kristo Krinpus,Tim Hardaway,NYK,SG,9,2018
 Kristo Krinpus,Robin Lopez,CHI,C,8,2018
 Kristo Krinpus,Tobias Harris,DET,PF,8,2018
 Kristo Krinpus,Dwyane Wade,CLE,SG,7,2018
@@ -476,7 +632,7 @@ Mart Jürisoo,Nerlens Noel,DAL,C,6,2018
 Mart Jürisoo,Markieff Morris,WAS,PF,4,2018
 Mart Jürisoo,Kelly Olynyk,MIA,C,3,2018
 Mart Jürisoo,Wesley Matthews,DAL,SG,2,2018
-Mart Jürisoo,Larry Nance Jr,LAL,PF,1,2018
+Mart Jürisoo,Larry Nance,LAL,PF,1,2018
 Mart Jürisoo,Maurice Harkless,POR,SF,1,2018
 Mart Jürisoo,Norman Powell,TOR,SG,1,2018
 Priit Aavik,John Wall,WAS,PG,49,2018
@@ -505,7 +661,7 @@ Priit Evart,Dwight Howard,CHA,C,11,2018
 Priit Evart,Dario Saric,PHI,SF,9,2018
 Priit Evart,Milos Teodosic,LAC,SG,9,2018
 Priit Evart,Kentavious Caldwell-Pope,LAL,SG,6,2018
-Priit Evart,Dennis Smith Jr,DAL,PG,5,2018
+Priit Evart,Dennis Smith,DAL,PG,5,2018
 Priit Evart,Zach Randolph,SAC,PF,3,2018
 Priit Evart,Bogdan Bogdanovic,SAC,SG,1,2018
 Priit Evart,Will Barton,DEN,SG,1,2018
@@ -668,7 +824,7 @@ Priit Evart,Al-Farouq Aminu,POR,SF,1,2017
 Priit Evart,Courtney Lee,NYK,SG,1,2017
 Priit Evart,Lance Stephenson,IND,SG,1,2017
 Priit Evart,Nene,HOU,PF,1,2017
-Priit Evart,Otto Porter Jr,WAS,SF,1,2017
+Priit Evart,Otto Porter,WAS,SF,1,2017
 Roger Krinpus,LaMarcus Aldridge,SAS,PF,25,2017
 Roger Krinpus,Victor Oladipo,OKC,SG,24,2017
 Roger Krinpus,Brook Lopez,BKN,C,21,2017
@@ -837,7 +993,7 @@ Valmar Raigo,DeMarre Carroll,TOR,SF,7,2016
 Valmar Raigo,Tim Duncan,SAS,PF,6,2016
 Valmar Raigo,Dirk Nowitzki,DAL,PF,2,2016
 Valmar Raigo,Bojan Bogdanovic,BKN,SG,1,2016
-Valmar Raigo,Otto Porter Jr,WAS,SF,1,2016
+Valmar Raigo,Otto Porter,WAS,SF,1,2016
 Werner Armulik,Paul George,IND,SF,52,2016
 Werner Armulik,Blake Griffin,LAC,PF,41,2016
 Werner Armulik,Rudy Gay,SAC,SF,29,2016
@@ -914,7 +1070,7 @@ Kristo Krinpus,Derrick Williams,SAC,PF,1,2015
 Kristo Krinpus,Devin Harris,DAL,PG,1,2015
 Kristo Krinpus,Gerald Green,PHX,SF,1,2015
 Kristo Krinpus,Nikola Mirotic,CHI,PF,1,2015
-Kristo Krinpus,Otto Porter Jr,WAS,SF,1,2015
+Kristo Krinpus,Otto Porter,WAS,SF,1,2015
 Kristo Krinpus,Ramon Sessions,WAS,PG,1,2015
 Mart Jürisoo,Jrue Holiday,NOP,PG,26,2015
 Mart Jürisoo,Derrick Favors,UTA,PF,23,2015
@@ -1136,7 +1292,7 @@ Roger Krinpus,Amir Johnson,TOR,PF,8,2014
 Roger Krinpus,Michael Carter-Williams,PHI,PG,4,2014
 Roger Krinpus,Jose Calderon,DAL,PG,3,2014
 Roger Krinpus,JJ Hickson,DEN,PF,2,2014
-Roger Krinpus,Otto Porter Jr,WAS,SF,2,2014
+Roger Krinpus,Otto Porter,WAS,SF,2,2014
 Tiit Loo,James Harden,HOU,SG,67,2014
 Tiit Loo,Kyrie Irving,CLE,PG,50,2014
 Tiit Loo,Kobe Bryant,LAL,SG,20,2014

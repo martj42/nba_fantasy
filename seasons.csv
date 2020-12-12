@@ -1,16 +1,16 @@
 season,position,team,manager,w,l,d
-2020,2,KK Tornaado,Asso Viiding,97,80,21
-2020,1,Werneri Gang,Werner Armulik,102,78,18
-2020,5,Seattle SuperSonics,Mart Jürisoo,93,85,20
-2020,6,Korvpallikool Majakas,Kaspar Komissarov,91,87,20
-2020,12,Saaremaa Laevakompanii,Priit Aavik,72,105,21
-2020,8,Uues kuues Pingud,Roger Krinpus,88,89,21
-2020,3,Vancouver Grizzlies,Joonas Rihma,95,80,23
-2020,9,Los Labidos Locos,Heigo Randma,85,91,22
-2020,6,SaareKaru,Immo Ilmjärv,90,86,22
-2020,11,#LeaveLeBronAlone,Freddy Haljandi,76,101,21
-2020,4,Poola Haamer,Priit Evart,93,82,23
-2020,10,BC Kluiverson,Kristo Krinpus,78,96,24
+2020,NA,KK Tornaado,Asso Viiding,97,80,21
+2020,NA,Werneri Gang,Werner Armulik,102,78,18
+2020,NA,Seattle SuperSonics,Mart Jürisoo,93,85,20
+2020,NA,Korvpallikool Majakas,Kaspar Komissarov,91,87,20
+2020,NA,Saaremaa Laevakompanii,Priit Aavik,72,105,21
+2020,NA,Uues kuues Pingud,Roger Krinpus,88,89,21
+2020,NA,Vancouver Grizzlies,Joonas Rihma,95,80,23
+2020,NA,Los Labidos Locos,Heigo Randma,85,91,22
+2020,NA,SaareKaru,Immo Ilmjärv,90,86,22
+2020,NA,#LeaveLeBronAlone,Freddy Haljandi,76,101,21
+2020,NA,Poola Haamer,Priit Evart,93,82,23
+2020,NA,BC Kluiverson,Kristo Krinpus,78,96,24
 2019,1,BC Kluiverson,Kristo Krinpus,117,79,2
 2019,9,Jinglin' Joe,Freddy Haljandi,87,109,2
 2019,3,KK Tornaado,Asso Viiding,108,90,0
@@ -149,3 +149,15 @@ season,position,team,manager,w,l,d
 2007,6,Team LeBron,Mikk Soone,90,100,2
 2007,7,Tusma Lendav Tsirkus,Märt Uuemaa,85,106,1
 2007,8,KK Valige Siim Kallas,Ants Mängel,72,118,2
+2021,1,Seattle SuperSonics 🍫,Mart Jürisoo,0,0,0
+2021,1,Los Labidos Locos,Heigo Randma,NA,NA,NA
+2021,1,BC Sophmore Kluiverson,Kristo Krinpus,0,0,0
+2021,1,Korvpallikool Majakas,Kaspar Komissarov,0,0,0
+2021,1,Poola Haamer,Priit Evart,0,0,0
+2021,1,Cancun On 3,Freddy Haljandi,0,0,0
+2021,1,Laagri Bullets,Johann Lents,0,0,0
+2021,1,KK Tornaado,Asso Viiding,0,0,0
+2021,1,Werneri Gang,Werner Armulik,0,0,0
+2021,1,SaareKaru,Immo Ilmjärv,0,0,0
+2021,1,Ülikondades Pingud,Roger Krinpus,0,0,0
+2021,1,Vancouver Grizzlies,Valmar Raigo,0,0,0
