@@ -1,16 +1,16 @@
 season,position,team,manager,w,l,d
-2021,1,Ülikondades Pingud,Roger Krinpus,12,5,1
-2021,2,BC Sophomore Kluiverson,Kristo Krinpus,12,6,0
-2021,2,Werneri Gang,Werner Armulik,12,6,0
-2021,4,💉 Los Vacunas Coronas 💉,Heigo Randma,10,8,0
-2021,5,Poola Haamer,Priit Evart,9,8,1
-2021,6,Pittsburgh Ironmen,Mart Jürisoo,9,9,0
-2021,7,Laagri Bullets,Johann Lents,8,9,1
-2021,7,Korvpallikool Majakas,Kaspar Komissarov,8,9,1
-2021,9,KK Tornaado,Asso Viiding,8,10,0
-2021,9,Vancouver Grizzlies,Valmar Raigo,8,10,0
-2021,11,Cancun On 3,Freddy Haljandi,5,13,0
-2021,11,SaareKaru,Immo Ilmjärv,5,13,0
+2021,1,Werneri Gang,Werner Armulik,19,8,0
+2021,2,Ülikondades Pingud,Roger Krinpus,17,9,1
+2021,3,Pittsburgh Ironmen,Mart Jürisoo,17,10,0
+2021,4,Poola Haamer,Priit Evart,15,11,1
+2021,5,BC Sophomore Kluiverson,Kristo Krinpus,15,12,0
+2021,6,KK Tornaado,Asso Viiding,13,14,0
+2021,7,Korvpallikool Majakas,Kaspar Komissarov,12,14,1
+2021,8,💉 Los Vacunas Coronas 💉,Heigo Randma,12,15,0
+2021,8,Cancun On 3,Freddy Haljandi,12,15,0
+2021,10,Laagri Bullets,Johann Lents,10,16,1
+2021,11,Vancouver Grizzlies,Valmar Raigo,9,18,0
+2021,11,SaareKaru,Immo Ilmjärv,9,18,0
 2020,NA,KK Tornaado,Asso Viiding,97,80,21
 2020,NA,Werneri Gang,Werner Armulik,102,78,18
 2020,NA,Seattle SuperSonics,Mart Jürisoo,93,85,20
