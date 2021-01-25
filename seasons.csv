@@ -1,16 +1,16 @@
 season,position,team,manager,w,l,d
-2021,1,Ülikondades Pingud,Roger Krinpus,24,10,2
-2021,2,Werneri Gang,Werner Armulik,24,12,0
-2021,3,Poola Haamer,Priit Evart,22,13,1
-2021,4,Pittsburgh Ironmen,Mart Jürisoo,19,17,0
-2021,4,KK Tornaado,Asso Viiding,19,17,0
-2021,4,Cancun On 3,Freddy Haljandi,19,17,0
-2021,7,Korvpallikool Majakas,Kaspar Komissarov,17,18,1
-2021,8,BC Sophomore Kluiverson,Kristo Krinpus,17,19,0
-2021,9,💉 Los Vacunas Coronas 💉,Heigo Randma,15,21,0
-2021,10,Laagri Bullets,Johann Lents,14,21,1
-2021,11,SaareKaru,Immo Ilmjärv,12,23,1
-2021,12,Vancouver Grizzlies,Valmar Raigo,11,25,0
+2021,1,Ülikondades Pingud,Roger Krinpus,30,13,2
+2021,2,Werneri Gang,Werner Armulik,30,15,0
+2021,3,KK Tornaado,Asso Viiding,26,19,0
+2021,4,Korvpallikool Majakas,Kaspar Komissarov,25,19,1
+2021,5,Pittsburgh Ironmen,Mart Jürisoo,25,20,0
+2021,6,Poola Haamer,Priit Evart,24,20,1
+2021,7,Cancun On 3,Freddy Haljandi,23,22,0
+2021,8,Laagri Bullets,Johann Lents,21,23,1
+2021,9,BC Sophomore Kluiverson,Kristo Krinpus,20,25,0
+2021,10,💉 Los Vacunas Coronas 💉,Heigo Randma,17,28,0
+2021,11,SaareKaru,Immo Ilmjärv,14,30,1
+2021,12,Vancouver Grizzlies,Valmar Raigo,12,33,0
 2020,NA,KK Tornaado,Asso Viiding,97,80,21
 2020,NA,Werneri Gang,Werner Armulik,102,78,18
 2020,NA,Seattle SuperSonics,Mart Jürisoo,93,85,20
