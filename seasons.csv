@@ -1,16 +1,16 @@
 season,position,team,manager,w,l,d
-2021,1,Cancun On 3,Freddy Haljandi,82,53,0
-2021,2,Werneri Gang,Werner Armulik,78,56,1
-2021,3,Ülikondades Pingud,Roger Krinpus,75,58,2
-2021,3,KK Tornaado,Asso Viiding,75,58,2
-2021,5,Korvpallikool Majakas,Kaspar Komissarov,75,59,1
-2021,6,Laagri Bullets,Johann Lents,68,66,1
-2021,7,Poola Haamer,Priit Evart,63,69,3
-2021,8,Pittsburgh Ironmen,Mart Jürisoo,61,74,0
-2021,9,BC Sophomore Kluiverson,Kristo Krinpus,60,75,0
-2021,10,Vancouver Grizzlies,Valmar Raigo,58,76,1
-2021,11,Los Santo Labidos & Antetokounmpo,Heigo Randma,56,78,1
-2021,12,SaareKaru,Immo Ilmjärv,52,81,2
+2021,1,Cancun On 3,Freddy Haljandi,88,56,0
+2021,2,Werneri Gang,Werner Armulik,83,60,1
+2021,3,KK Tornaado,Asso Viiding,82,60,2
+2021,4,Ülikondades Pingud,Roger Krinpus,81,60,3
+2021,5,Korvpallikool Majakas,Kaspar Komissarov,78,65,1
+2021,6,Laagri Bullets,Johann Lents,73,70,1
+2021,7,Poola Haamer,Priit Evart,65,75,4
+2021,8,Vancouver Grizzlies,Valmar Raigo,64,79,1
+2021,9,Pittsburgh Ironmen,Mart Jürisoo,64,80,0
+2021,9,BC Sophomore Kluiverson,Kristo Krinpus,64,80,0
+2021,11,Los Santo Labidos & Antetokounmpo,Heigo Randma,60,83,1
+2021,12,SaareKaru,Immo Ilmjärv,54,88,2
 2020,NA,KK Tornaado,Asso Viiding,97,80,21
 2020,NA,Werneri Gang,Werner Armulik,102,78,18
 2020,NA,Seattle SuperSonics,Mart Jürisoo,93,85,20
