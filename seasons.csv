@@ -1,16 +1,16 @@
 season,position,team,manager,w,l,d
-2021,1,Ülikondades Pingud,Roger Krinpus,110,76,3
-2021,2,Cancun On 3,Freddy Haljandi,109,79,1
-2021,2,KK Tornaado,Asso Viiding,107,77,5
-2021,4,Korvpallikool Majakas,Kaspar Komissarov,107,81,1
-2021,5,Vancouver Grizzlies,Valmar Raigo,95,93,1
-2021,6,Werneri Gang,Werner Armulik,92,94,3
-2021,7,Pittsburgh Ironmen,Mart Jürisoo,91,96,2
-2021,8,Laagri Bullets,Johann Lents,90,96,3
-2021,9,SaareKaru,Immo Ilmjärv,80,106,3
-2021,10,BC Sophomore Kluiverson,Kristo Krinpus,81,108,0
-2021,11,Poola Haamer,Priit Evart,78,106,5
-2021,11,Los Santo Labidos & Antetokounmpo,Heigo Randma,80,108,1
+2021,1,Ülikondades Pingud,Roger Krinpus,114,80,4
+2021,2,KK Tornaado,Asso Viiding,113,80,5
+2021,3,Cancun On 3,Freddy Haljandi,113,84,1
+2021,4,Korvpallikool Majakas,Kaspar Komissarov,112,85,1
+2021,5,Vancouver Grizzlies,Valmar Raigo,100,97,1
+2021,6,Werneri Gang,Werner Armulik,96,99,3
+2021,7,Pittsburgh Ironmen,Mart Jürisoo,95,100,3
+2021,8,Laagri Bullets,Johann Lents,93,102,3
+2021,9,SaareKaru,Immo Ilmjärv,85,110,3
+2021,9,Los Santo Labidos & Antetokounmpo,Heigo Randma,86,111,1
+2021,11,BC Sophomore Kluiverson,Kristo Krinpus,85,113,0
+2021,12,Poola Haamer,Priit Evart,81,112,5
 2020,NA,KK Tornaado,Asso Viiding,97,80,21
 2020,NA,Werneri Gang,Werner Armulik,102,78,18
 2020,NA,Seattle SuperSonics,Mart Jürisoo,93,85,20
