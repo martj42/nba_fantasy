@@ -1,16 +1,16 @@
-Season,Most Valuable Player,Rookie of the Year,$1 MVP,Undrafted MVP,Most Improved Player
-2021,Nikola Jokic,Tyrese Haliburton,Chris Boucher,Kelly Olynyk,Chris Boucher
-2020,James Harden,Brandon Clarke,Mikal Bridges,Nemanja Bjelica,Duncan Robinson
-2019,James Harden,Luka Doncic,Pascal Siakam,Montrezl Harrell,Paul George
-2018,Anthony Davis,Ben Simmons,Will Barton,Kyle Anderson,Victor Oladipo
-2017,James Harden,Joel Embiid,Otto Porter,Jrue Holiday,James Johnson
-2016,Stephen Curry,Karl-Anthony Towns,Kristaps Porzingis,Marvin Williams,CJ McCollum
-2015,Stephen Curry,Nerlens Noel,Khris Middleton,Draymond Green,Rudy Gobert
-2014,Kevin Durant,Victor Oladipo,Shawn Marion,Spencer Hawes,Anthony Davis
-2013,Kevin Durant,Damian Lillard,Nikola Vucevic,Larry Sanders,Larry Sanders
-2012,Kevin Durant,Kyrie Irving,Jason Kidd,Paul George,Jeff Teague
-2011,LeBron James,Landry Fields,Dorell Wright,Kyle Lowry,Dorell Wright
-2010,Kevin Durant,Stephen Curry,NA,NA,Channing Frye
-2009,Chris Paul,Brook Lopez,NA,NA,Dwyane Wade
-2008,Chris Paul,Jamario Moon,NA,NA,Chris Paul
-2007,Shawn Marion,Rajon Rondo,NA,NA,Matt Barnes
+Season,Most Valuable Player,Rookie of the Year,$1 MVP,Undrafted MVP,Most Improved Player,Least Improved Player,Best Value Pick,Worst Value Pick
+2021,Nikola Jokic,Tyrese Haliburton,Chris Boucher,Kelly Olynyk,Michael Porter,Eric Bledsoe,Terry Rozier,Anthony Davis
+2020,James Harden,Brandon Clarke,Mikal Bridges,Nemanja Bjelica,Hassan Whiteside,Giannis Antetokounmpo,Hassan Whiteside,Stephen Curry
+2019,James Harden,Luka Doncic,Pascal Siakam,Montrezl Harrell,Malik Beasley,Chris Paul,Pascal Siakam,Victor Oladipo
+2018,Anthony Davis,Ben Simmons,Will Barton,Kyle Anderson,Victor Oladipo,Russell Westbrook,Will Barton,Kawhi Leonard
+2017,James Harden,Joel Embiid,Otto Porter,Jrue Holiday,Nikola Jokic,Stephen Curry,Otto Porter,DeMarcus Cousins
+2016,Stephen Curry,Karl-Anthony Towns,Kristaps Porzingis,Marvin Williams,CJ McCollum,Ty Lawson,Karl-Anthony Towns,Anthony Davis
+2015,Stephen Curry,Nerlens Noel,Khris Middleton,Draymond Green,Gorgui Dieng,Spencer Hawes,Pau Gasol,Kevin Durant
+2014,Kevin Durant,Victor Oladipo,Shawn Marion,Spencer Hawes,Gerald Green,Luke Ridnour,Kyle Lowry,Derrick Rose
+2013,Kevin Durant,Damian Lillard,Nikola Vucevic,Larry Sanders,Nikola Vucevic,Kris Humphries,Nikola Vucevic,Kevin Love
+2012,Kevin Durant,Kyrie Irving,Jason Kidd,Paul George,Jeff Teague,Lamar Odom,James Harden,Stephen Curry
+2011,LeBron James,Landry Fields,Dorell Wright,Kyle Lowry,Dorell Wright,Brendan Haywood,LaMarcus Aldridge,Brandon Roy
+2010,Kevin Durant,Stephen Curry,NA,NA,Channing Frye,Jose Calderon,NA,NA
+2009,Chris Paul,Brook Lopez,NA,NA,Kevin Durant,Baron Davis,NA,NA
+2008,Chris Paul,Jamario Moon,NA,NA,Beno Udrih,Zaza Pachulia,NA,NA
+2007,Shawn Marion,Rajon Rondo,NA,NA,David Lee,Mike James,NA,NA
