@@ -1,16 +1,16 @@
 season,position,team,manager,w,l,d
-2022,1,Werneri Gang,Werner Armulik,7,2,0
-2022,2,Ülikondades Pingud,Roger Krinpus,6,3,0
-2022,3,Los Santo Labidos & Covid-Kyrie,Heigo Randma,5,3,1
-2022,4,Las Vegas Raiders,Mart Jürisoo,5,4,0
-2022,4,Poola Haamer,Priit Evart,5,4,0
-2022,6,KK Tornaado,Asso Viiding,4,4,1
-2022,6,Laagri Bullets,Johann Lents,4,4,1
-2022,8,Korvpallikool Majakas,Kaspar Komissarov,4,5,0
-2022,8,Vancouver Grizzlies,Valmar Raigo,4,5,0
-2022,10,SaareKaru,Immo Ilmjärv,3,5,1
-2022,11,BC Kluiverson,Kristo Krinpus,3,6,0
-2022,12,Cancun On 3,Freddy Haljandi,2,7,0
+2022,1,Las Vegas Raiders,Mart Jürisoo,12,6,0
+2022,1,Laagri Bullets,Johann Lents,12,6,0
+2022,3,Los Santo Labidos & Covid-Kyrie,Heigo Randma,10,7,1
+2022,4,Ülikondades Pingud,Roger Krinpus,10,8,0
+2022,4,Werneri Gang,Werner Armulik,10,8,0
+2022,4,BC Kluiverson,Kristo Krinpus,10,8,0
+2022,7,SaareKaru,Immo Ilmjärv,9,8,1
+2022,8,Korvpallikool Majakas,Kaspar Komissarov,9,9,0
+2022,9,KK Tornaado,Asso Viiding,8,10,0
+2022,10,Poola Haamer,Priit Evart,7,11,0
+2022,11,Vancouver Grizzlies,Valmar Raigo,6,12,0
+2022,12,Cancun On 3,Freddy Haljandi,4,14,0
 2021,1,Ülikondades Pingud,Roger Krinpus,114,80,4
 2021,2,KK Tornaado,Asso Viiding,113,80,5
 2021,3,Cancun On 3,Freddy Haljandi,113,84,1
