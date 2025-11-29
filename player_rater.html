@@ -213,8 +213,8 @@
         <div class="col-md-3 control-group">
           <label>Rank By:</label>
           <div class="btn-group">
-            <button class="btn-toggle" data-value="Per Game">Per Game</button>
             <button class="btn-toggle" data-value="Totals">Totals</button>
+            <button class="btn-toggle" data-value="Per Game">Per Game</button>
             <button class="btn-toggle" data-value="Per Minute">Per Minute</button>
           </div>
         </div>
@@ -258,7 +258,7 @@
             <th rowspan="2">Fantasy</th>
             <th rowspan="2">Position</th>
             <th rowspan="2">GP</th>
-            <th rowspan="2">MIN</th>
+            <th rowspan="2">MPG</th>
             <th colspan="9">Per Game Stats</th>
             <th colspan="9">Adjusted Stats</th>
             <th rowspan="2">Total</th>
@@ -652,7 +652,7 @@
 
       const minMin = document.getElementById('filterMin').value;
       if (minMin) {
-        filtered = filtered.filter(r => r.min >= Number(minMin));
+        filtered = filtered.filter(r => r.min_pg >= Number(minMin));
       }
 
       return filtered;
