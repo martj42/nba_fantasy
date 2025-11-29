@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Better* Player Rater</title>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.4.0/css/fixedHeader.dataTables.min.css" />
+  <style>
+    body {
+      font-family: "IBM Plex Mono", monospace;
+      padding: 20px;
+      background-color: #f8f9fa;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .controls-panel {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .control-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 5px;
+      display: block;
+      font-size: 0.9em;
+    }
+
+    input,
+    select {
+      font-family: "IBM Plex Mono", monospace;
+      padding: 6px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+
+    .btn-toggle {
+      padding: 6px 12px;
+      border: 1px solid #007bff;
+      background: white;
+      color: #007bff;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 0.85em;
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .btn-toggle.active {
+      background: #007bff;
+      color: white;
+    }
+
+    .btn-toggle:hover {
+      background: #0056b3;
+      color: white;
+      border-color: #0056b3;
+    }
+
+    table.dataTable tbody td.active,
+    table.dataTable tbody tr.active td {
+      background-color: #a91b0c !important;
+      color: white !important;
+    }
+
+    table.dataTable thead th {
+      font-weight: bold;
+      background: #f8f9fa;
+      border-bottom: 2px solid #dee2e6;
+    }
+
+    .color-cell {
+      font-weight: 500;
+    }
+
+    .bold-col {
+      font-weight: bold !important;
+    }
+
+    .footer-note {
+      margin-top: 20px;
+      font-style: italic;
+      color: #666;
+    }
+
+    #table_wrapper {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .dropdown {
+      position: relative;
+      width: 100%;
+    }
+
+    .dropdown-toggle {
+      font-family: "IBM Plex Mono", monospace;
+      padding: 6px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background: white;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-top: 2px;
+      max-height: 300px;
+      overflow-y: auto;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .dropdown-menu.show {
+      display: block;
+    }
+
+    .dropdown-item {
+      padding: 8px 12px;
+      cursor: pointer;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.9em;
+    }
+
+    .dropdown-item:hover {
+      background: #f0f0f0;
+    }
+
+    .dropdown-item.selected {
+      background: #007bff;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <h1>A Better* Player Rater</h1>
+
+    <div class="controls-panel">
+      <div class="row">
+        <div class="col-md-2 control-group">
+          <label for="playerSearch">Player Search:</label>
+          <input id="playerSearch" type="text" placeholder="Search..." />
+        </div>
+
+        <div class="col-md-2 control-group">
+          <label>NBA Team:</label>
+          <div class="dropdown">
+            <div class="dropdown-toggle" id="nbaToggle">All</div>
+            <div class="dropdown-menu" id="nbaMenu"></div>
+          </div>
+        </div>
+
+        <div class="col-md-2 control-group">
+          <label>Fantasy Team:</label>
+          <div class="dropdown">
+            <div class="dropdown-toggle" id="fantasyToggle">All</div>
+            <div class="dropdown-menu" id="fantasyMenu"></div>
+          </div>
+        </div>
+
+        <div class="col-md-1 control-group">
+          <label>Position:</label>
+          <div class="dropdown">
+            <div class="dropdown-toggle" id="positionToggle">All</div>
+            <div class="dropdown-menu" id="positionMenu">
+              <div class="dropdown-item selected" data-value="All">All</div>
+              <div class="dropdown-item" data-value="PG">PG</div>
+              <div class="dropdown-item" data-value="SG">SG</div>
+              <div class="dropdown-item" data-value="SF">SF</div>
+              <div class="dropdown-item" data-value="F">PF</div>
+              <div class="dropdown-item" data-value="C">C</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-1 control-group">
+          <label for="daysBack">Days Back:</label>
+          <input id="daysBack" type="number" value="7" min="1" />
+        </div>
+
+        <div class="col-md-3 control-group">
+          <label>Rank By:</label>
+          <div class="btn-group">
+            <button class="btn-toggle" data-value="Per Game">Per Game</button>
+            <button class="btn-toggle" data-value="Totals">Totals</button>
+            <button class="btn-toggle" data-value="Per Minute">Per Minute</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-md-1 control-group">
+          <label for="filterGP">Filter GP:</label>
+          <input id="filterGP" type="number" min="0" placeholder="Min GP" />
+        </div>
+
+        <div class="col-md-1 control-group">
+          <label for="filterMin">Filter Minutes:</label>
+          <input id="filterMin" type="number" min="0" placeholder="Min Minutes" />
+        </div>
+
+        <div class="col-md-9 control-group">
+          <label>Include in Total:</label>
+          <div class="btn-group" id="statsToggles">
+            <button class="btn-toggle active" data-stat="fg">FG</button>
+            <button class="btn-toggle active" data-stat="ft">FT</button>
+            <button class="btn-toggle active" data-stat="fg3m">3PM</button>
+            <button class="btn-toggle active" data-stat="reb">REB</button>
+            <button class="btn-toggle active" data-stat="ast">AST</button>
+            <button class="btn-toggle active" data-stat="stl">STL</button>
+            <button class="btn-toggle active" data-stat="blk">BLK</button>
+            <button class="btn-toggle active" data-stat="tov">TOV</button>
+            <button class="btn-toggle active" data-stat="pts">PTS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tableContainer">
+      <table id="table" class="display" style="width:100%">
+        <thead>
+          <tr>
+            <th rowspan="2">RK</th>
+            <th rowspan="2">Player</th>
+            <th rowspan="2">NBA</th>
+            <th rowspan="2">Fantasy</th>
+            <th rowspan="2">Position</th>
+            <th rowspan="2">GP</th>
+            <th rowspan="2">MIN</th>
+            <th colspan="9">Per Game Stats</th>
+            <th colspan="9">Adjusted Stats</th>
+            <th rowspan="2">Total</th>
+          </tr>
+          <tr>
+            <th>FG</th>
+            <th>FT</th>
+            <th>3PM</th>
+            <th>REB</th>
+            <th>AST</th>
+            <th>STL</th>
+            <th>BLK</th>
+            <th>TOV</th>
+            <th>PTS</th>
+            <th>FG</th>
+            <th>FT</th>
+            <th>3PM</th>
+            <th>REB</th>
+            <th>AST</th>
+            <th>STL</th>
+            <th>BLK</th>
+            <th>TOV</th>
+            <th>PTS</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="footer-note">
+      *Not yet better
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/fixedheader/3.4.0/js/dataTables.fixedHeader.min.js"></script>
+
+  <script>
+    // Global state
+    let rawStats = [];
+    let fantasyData = [];
+    let dataTable = null;
+    let currentRankBy = 'Per Game';
+    let activeStats = ['fg', 'ft', 'fg3m', 'reb', 'ast', 'stl', 'blk', 'tov', 'pts'];
+    let selectedNbaTeams = ['All'];
+    let selectedFantasyTeams = ['All'];
+    let selectedPositions = ['All'];
+    // Utility: Load CSV
+    async function loadCSV(url) {
+      const res = await fetch(url, {
+        cache: 'no-store',
+        headers: {
+          'Cache-Control': 'no-cache'
+        }
+      });
+      const text = await res.text(); const rows = text.trim().split("\n");
+      const headers = rows[0].split(",").map(h => h.trim().replace(/"/g, ''));
+
+      return rows.slice(1).map(row => {
+        const values = parseCSVRow(row);
+        return Object.fromEntries(headers.map((h, i) => [h, values[i]]));
+      });
+    }
+
+    // Handle CSV parsing with quoted values
+    function parseCSVRow(row) {
+      const result = [];
+      let current = '';
+      let inQuotes = false;
+
+      for (let i = 0; i < row.length; i++) {
+        const char = row[i];
+        if (char === '"') {
+          inQuotes = !inQuotes;
+        } else if (char === ',' && !inQuotes) {
+          result.push(current.trim());
+          current = '';
+        } else {
+          current += char;
+        }
+      }
+      result.push(current.trim());
+      return result;
+    }
+
+    // Normalize names
+    function normalizeName(name) {
+      if (!name) return '';
+
+      const nameMap = {
+        "Luc Richard Mbah a Moute": "Luc Mbah a Moute",
+        "Moe Harkless": "Maurice Harkless",
+        "Nazareth Mitrou-Long": "Naz Mitrou-Long",
+        "DeAndre Bembry": "DeAndre' Bembry",
+        "Devonte Graham": "Devonte' Graham",
+        "Nicolas Claxton": "Nic Claxton",
+        "Cameron Thomas": "Cam Thomas",
+        "Nah'Shon Hyland": "Bones Hyland",
+        "BJ Boston": "Brandon Boston",
+        "KJ Martin": "Kenyon Martin",
+        "DeAndre Hunter": "De'Andre Hunter",
+        "DeAaron Fox": "De'Aaron Fox",
+        "NaeQwan Tomlin": "Nae'Qwan Tomlin",
+        "DayRon Sharpe": "Day'Ron Sharpe",
+        "Kelel Ware": "Kel'el Ware",
+        "JaKobe Walter": "Ja'Kobe Walter",
+        "JaeSean Tate": "Jae'Sean Tate",
+        "DAngelo Russell": "D'Angelo Russell",
+        "NFaly Dante": "N'Faly Dante",
+        "TJ McConnell": "T.J. McConnell",
+        "PJ Washington": "P.J. Washington",
+        "EJ Liddell": "E.J. Liddell",
+        "Gary Payton": "Gary Payton II",
+        "Kelly Oubre": "Kelly Oubre Jr.",
+        "Rob Dillingham": "Robert Dillingham",
+        "Royce ONeale": "Royce O'Neale",
+        "Ron Holland": "Ronald Holland",
+        "Carlton Carrington": "Bub Carrington"
+
+      };
+
+      let normalized = nameMap[name] || name;
+      return normalized.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+
+    // Calculate z-scores using the elite player method from R
+    function calculateZScores(data) {
+      const players = 144; // Number of elite players to use for baseline
+
+      // First pass: Calculate league average shooting percentages
+      let totalFgm = 0, totalFga = 0, totalFtm = 0, totalFta = 0;
+      data.forEach(row => {
+        totalFgm += Number(row.fgm) || 0;
+        totalFga += Number(row.fga) || 0;
+        totalFtm += Number(row.ftm) || 0;
+        totalFta += Number(row.fta) || 0;
+      });
+
+      const lgFg = totalFga > 0 ? totalFgm / totalFga : 0;
+      const lgFt = totalFta > 0 ? totalFtm / totalFta : 0;
+
+      // Calculate initial fg and ft impact for ranking
+      const withImpact = data.map(row => {
+        const fga = Number(row.fga) || 0;
+        const fta = Number(row.fta) || 0;
+        const fgPct = fga > 0 ? (Number(row.fgm) || 0) / fga : 0;
+        const ftPct = fta > 0 ? (Number(row.ftm) || 0) / fta : 0;
+
+        return {
+          ...row,
+          fg_impact: fga > 0 ? (fgPct - lgFg) * fga : 0,
+          ft_impact: fta > 0 ? (ftPct - lgFt) * fta : 0
+        };
+      });
+
+      // Scale the impact stats to get initial z-scores
+      const impactStats = ['pts', 'ast', 'reb', 'stl', 'blk', 'tov', 'fg3m', 'fg_impact', 'ft_impact'];
+      const initialZScores = {};
+
+      impactStats.forEach(stat => {
+        const values = withImpact.map(r => stat === 'fg_impact' || stat === 'ft_impact' ? r[stat] : (Number(r[stat]) || 0));
+        const mean = values.reduce((a, b) => a + b, 0) / values.length;
+        const std = Math.sqrt(values.reduce((sq, n) => sq + Math.pow(n - mean, 2), 0) / values.length);
+
+        initialZScores[stat] = { mean, std };
+
+        withImpact.forEach((row, i) => {
+          const value = stat === 'fg_impact' || stat === 'ft_impact' ? row[stat] : (Number(row[stat]) || 0);
+          row[`${stat}_z`] = std === 0 ? 0 : (value - mean) / std;
+        });
+      });
+
+      // Calculate initial total to find elite players
+      withImpact.forEach(row => {
+        row.initial_total =
+          row.pts_z +
+          row.reb_z +
+          row.ast_z +
+          row.stl_z +
+          row.blk_z +
+          row.fg3m_z -
+          row.tov_z +
+          row.ft_impact_z +
+          row.fg_impact_z;
+      });
+
+      // Get top N elite players
+      const sorted = [...withImpact].sort((a, b) => b.initial_total - a.initial_total);
+      const eliteCount = Math.min(players, sorted.length);
+      const elitePlayers = sorted.slice(0, eliteCount);
+
+      // Second pass: Calculate elite league averages
+      totalFgm = 0;
+      totalFga = 0;
+      totalFtm = 0;
+      totalFta = 0;
+
+      elitePlayers.forEach(row => {
+        totalFgm += Number(row.fgm) || 0;
+        totalFga += Number(row.fga) || 0;
+        totalFtm += Number(row.ftm) || 0;
+        totalFta += Number(row.fta) || 0;
+      });
+
+      const eliteLgFg = totalFga > 0 ? totalFgm / totalFga : 0;
+      const eliteLgFt = totalFta > 0 ? totalFtm / totalFta : 0;
+
+      // Calculate elite means and standard deviations
+      const regularStats = ['pts', 'ast', 'reb', 'tov', 'blk', 'stl', 'fg3m'];
+      const eliteMeans = {};
+      const eliteSds = {};
+
+      regularStats.forEach(stat => {
+        const values = elitePlayers.map(r => Number(r[stat]) || 0);
+        const mean = values.reduce((a, b) => a + b, 0) / values.length;
+        const variance = values.reduce((sq, n) => sq + Math.pow(n - mean, 2), 0) / values.length;
+        const std = Math.sqrt(variance);
+
+        eliteMeans[stat] = mean;
+        eliteSds[stat] = std;
+      });
+
+      // Final pass: Calculate z-scores for all players using elite baseline
+      const final = withImpact.map(row => {
+        const fga = Number(row.fga) || 0;
+        const fta = Number(row.fta) || 0;
+        const fgPct = fga > 0 ? (Number(row.fgm) || 0) / fga : 0;
+        const ftPct = fta > 0 ? (Number(row.ftm) || 0) / fta : 0;
+
+        // Calculate FG and FT impact using elite league averages
+        let fgImpact = fga > 0 ? (fgPct - eliteLgFg) * fga : 0;
+        let ftImpact = fta > 0 ? (ftPct - eliteLgFt) * fta : 0;
+
+        // Scale FG and FT impacts
+        const fgImpactValues = withImpact.map(r => {
+          const a = Number(r.fga) || 0;
+          const pct = a > 0 ? (Number(r.fgm) || 0) / a : 0;
+          return a > 0 ? (pct - eliteLgFg) * a : 0;
+        });
+        const fgImpactMean = fgImpactValues.reduce((a, b) => a + b, 0) / fgImpactValues.length;
+        const fgImpactStd = Math.sqrt(fgImpactValues.reduce((sq, n) => sq + Math.pow(n - fgImpactMean, 2), 0) / fgImpactValues.length);
+
+        const ftImpactValues = withImpact.map(r => {
+          const a = Number(r.fta) || 0;
+          const pct = a > 0 ? (Number(r.ftm) || 0) / a : 0;
+          return a > 0 ? (pct - eliteLgFt) * a : 0;
+        });
+        const ftImpactMean = ftImpactValues.reduce((a, b) => a + b, 0) / ftImpactValues.length;
+        const ftImpactStd = Math.sqrt(ftImpactValues.reduce((sq, n) => sq + Math.pow(n - ftImpactMean, 2), 0) / ftImpactValues.length);
+
+        const result = { ...row };
+
+        // Calculate z-scores using elite baseline
+        result.fg = fgImpactStd > 0 ? (fgImpact - fgImpactMean) / fgImpactStd : 0;
+        result.ft = ftImpactStd > 0 ? (ftImpact - ftImpactMean) / ftImpactStd : 0;
+        result.ast = eliteSds.ast > 0 ? ((Number(row.ast) || 0) - eliteMeans.ast) / eliteSds.ast : 0;
+        result.pts = eliteSds.pts > 0 ? ((Number(row.pts) || 0) - eliteMeans.pts) / eliteSds.pts : 0;
+        result.reb = eliteSds.reb > 0 ? ((Number(row.reb) || 0) - eliteMeans.reb) / eliteSds.reb : 0;
+        result.stl = eliteSds.stl > 0 ? ((Number(row.stl) || 0) - eliteMeans.stl) / eliteSds.stl : 0;
+        result.blk = eliteSds.blk > 0 ? ((Number(row.blk) || 0) - eliteMeans.blk) / eliteSds.blk : 0;
+        result.tov = eliteSds.tov > 0 ? -((Number(row.tov) || 0) - eliteMeans.tov) / eliteSds.tov : 0; // Negative for turnovers
+        result.fg3m = eliteSds.fg3m > 0 ? ((Number(row.fg3m) || 0) - eliteMeans.fg3m) / eliteSds.fg3m : 0;
+
+        // Cap z-scores at -3 to 3
+        ['fg', 'ft', 'fg3m', 'reb', 'ast', 'stl', 'blk', 'tov', 'pts'].forEach(stat => {
+          if (result[stat] > 3) result[stat] = 3;
+          if (result[stat] < -3) result[stat] = -3;
+        });
+
+        // Clean up temporary fields
+        delete result.fg_impact;
+        delete result.ft_impact;
+        delete result.initial_total;
+        delete result.pts_z;
+        delete result.ast_z;
+        delete result.reb_z;
+        delete result.stl_z;
+        delete result.blk_z;
+        delete result.tov_z;
+        delete result.fg3m_z;
+        delete result.fg_impact_z;
+        delete result.ft_impact_z;
+
+        return result;
+      });
+
+      return final;
+    }
+
+    function processData(stats, daysBack, rankBy) {
+      const maxDate = new Date(Math.max(...stats.map(s => new Date(s.game_date))));
+      const minDate = new Date(maxDate);
+      minDate.setDate(minDate.getDate() - daysBack);
+
+      const filtered = stats.filter(s => new Date(s.game_date) > minDate);
+
+      const grouped = {};
+      filtered.forEach(row => {
+        const name = row.player_name;
+        if (!grouped[name]) {
+          grouped[name] = {
+            player_name: name,
+            nba: row.team_name,
+            fantasy: row.fantasy_team || '(Free Agent)',
+            position: row.position || '',
+            games: [],
+            gp: 0
+          };
+        }
+        grouped[name].games.push(row);
+        grouped[name].gp++;
+      });
+
+      const aggregated = Object.values(grouped).map(player => {
+        const stats = ['min', 'fgm', 'fga', 'ftm', 'fta', 'fg3m', 'reb', 'ast', 'stl', 'blk', 'tov', 'pts'];
+        const result = { ...player };
+
+        // Always calculate per-game for display
+        stats.forEach(stat => {
+          const values = player.games.map(g => Number(g[stat]) || 0);
+          const sum = values.reduce((a, b) => a + b, 0);
+          result[`${stat}_pg`] = sum / player.gp;
+        });
+
+        // Calculate stats for z-score calculation based on rankBy
+        if (rankBy === 'Per Game') {
+          stats.forEach(stat => {
+            result[stat] = result[`${stat}_pg`];
+          });
+        } else if (rankBy === 'Per Minute') {
+          const totalMin = player.games.reduce((sum, g) => sum + (Number(g.min) || 0), 0);
+          stats.forEach(stat => {
+            const sum = player.games.reduce((s, g) => s + (Number(g[stat]) || 0), 0);
+            result[stat] = totalMin > 0 ? sum / totalMin : 0;
+          });
+        } else { // Totals
+          stats.forEach(stat => {
+            result[stat] = player.games.reduce((sum, g) => sum + (Number(g[stat]) || 0), 0);
+          });
+        }
+
+        // Calculate shooting percentages for display (always per-game basis)
+        result.fg_pct = result.fga_pg > 0 ? (result.fgm_pg / result.fga_pg * 100) : 0;
+        result.ft_pct = result.fta_pg > 0 ? (result.ftm_pg / result.fta_pg * 100) : 0;
+
+        delete result.games;
+        return result;
+      });
+
+      const withZScores = calculateZScores(aggregated);
+
+      withZScores.forEach(row => {
+        row.total = activeStats.reduce((sum, stat) => sum + (Number(row[stat]) || 0), 0);
+      });
+
+      withZScores.sort((a, b) => b.total - a.total);
+      withZScores.forEach((row, i) => {
+        row.rk = i + 1;
+      });
+
+      return withZScores;
+    }
+
+    function applyFilters(data) {
+      let filtered = [...data];
+
+      const search = document.getElementById('playerSearch').value.toLowerCase();
+      if (search) {
+        filtered = filtered.filter(r => r.player_name.toLowerCase().includes(search));
+      }
+
+      if (selectedNbaTeams.length > 0 && !selectedNbaTeams.includes('All')) {
+        filtered = filtered.filter(r => selectedNbaTeams.includes(r.nba));
+      }
+
+      if (selectedFantasyTeams.length > 0 && !selectedFantasyTeams.includes('All')) {
+        filtered = filtered.filter(r => selectedFantasyTeams.includes(r.fantasy));
+      }
+
+      if (selectedPositions.length > 0 && !selectedPositions.includes('All')) {
+        filtered = filtered.filter(r => {
+          return selectedPositions.some(pos => r.position.includes(pos));
+        });
+      }
+
+      const minGP = document.getElementById('filterGP').value;
+      if (minGP) {
+        filtered = filtered.filter(r => r.gp >= Number(minGP));
+      }
+
+      const minMin = document.getElementById('filterMin').value;
+      if (minMin) {
+        filtered = filtered.filter(r => r.min >= Number(minMin));
+      }
+
+      return filtered;
+    }
+
+    // Get background color based on z-score
+    function getZScoreColor(value) {
+      const colors = [
+        '#a91b0c', '#d32f2f', '#e57373', '#ffcdd2',
+        'white',
+        '#c8e6c9', '#81c784', '#4caf50', 'forestgreen'
+      ];
+      const breakpoints = [-3.5, -2.5, -1.5, -0.5, 0.5, 1.5, 2.5, 3.5];
+
+      for (let i = 0; i < breakpoints.length; i++) {
+        if (value < breakpoints[i]) return colors[i];
+      }
+      return colors[colors.length - 1];
+    }
+
+    function renderTable(data) {
+      const filtered = applyFilters(data);
+      const tableData = filtered.map(row => {
+        return [
+          row.rk,
+          row.player_name,
+          row.nba,
+          row.fantasy,
+          row.position,
+          row.gp,
+          row.min_pg.toFixed(1),
+          `${row.fg_pct.toFixed(1)}% (${row.fgm_pg.toFixed(1)}/${row.fga_pg.toFixed(1)})`,
+          `${row.ft_pct.toFixed(1)}% (${row.ftm_pg.toFixed(1)}/${row.fta_pg.toFixed(1)})`,
+          row.fg3m_pg.toFixed(1),
+          row.reb_pg.toFixed(1),
+          row.ast_pg.toFixed(1),
+          row.stl_pg.toFixed(1),
+          row.blk_pg.toFixed(1),
+          row.tov_pg.toFixed(1),
+          row.pts_pg.toFixed(1),
+          row.fg.toFixed(2),
+          row.ft.toFixed(2),
+          row.fg3m.toFixed(2),
+          row.reb.toFixed(2),
+          row.ast.toFixed(2),
+          row.stl.toFixed(2),
+          row.blk.toFixed(2),
+          row.tov.toFixed(2),
+          row.pts.toFixed(2),
+          row.total.toFixed(2)
+        ];
+      });
+
+      if (dataTable) {
+        dataTable.clear().rows.add(tableData).draw();
+      } else {
+        dataTable = $('#table').DataTable({
+          data: tableData,
+          pageLength: 100,
+          lengthChange: false,
+          searching: false,
+          fixedHeader: true,
+          order: [[25, 'desc']],
+          columnDefs: [
+            { orderSequence: ['desc', 'asc'], targets: '_all' }
+          ],
+          drawCallback: function () {
+            applyConditionalFormatting();
+          }
+        });
+        applyConditionalFormatting();
+      }
+    }
+    // Apply conditional formatting to z-score columns
+    function applyConditionalFormatting() {
+      if (!dataTable) return; // Add this safety check
+
+      const zScoreCols = [16, 17, 18, 19, 20, 21, 22, 23, 24]; // Adjusted z-score columns
+
+      dataTable.rows().every(function () {
+        const row = this.node();
+        const data = this.data();
+
+        // Bold player name and total
+        $(row).find('td:eq(1)').addClass('bold-col');
+        $(row).find('td:eq(25)').addClass('bold-col');
+
+        // Color z-score cells
+        zScoreCols.forEach(colIdx => {
+          const cell = $(row).find(`td:eq(${colIdx})`);
+          const value = parseFloat(data[colIdx]);
+          if (!isNaN(value)) {
+            cell.css('background-color', getZScoreColor(value));
+            cell.addClass('color-cell');
+          }
+        });
+      });
+    }
+
+    // Merge fantasy data
+    function mergeFantasyData(stats, fantasy) {
+      const fantasyMap = new Map();
+      fantasy.forEach(f => {
+        const name = normalizeName(f.Player);
+        fantasyMap.set(name, {
+          team: f.Status === 'FA' ? '(FA)' : f.Status,
+          position: (f.Position || '').replace(/,Flx/g, '').replace(/,F/g, '').replace(/,G/g, '')
+        });
+      });
+
+      return stats.map(s => ({
+        ...s,
+        fantasy_team: fantasyMap.get(s.player_name)?.team || '(FA)',
+        position: fantasyMap.get(s.player_name)?.position || s.position || ''
+      }));
+    }
+
+    // Populate filter dropdowns
+    function populateFilters(data) {
+      const nbaTeams = [...new Set(data.map(d => d.team_name))].sort();
+      const fantasyTeams = [...new Set(data.map(d => d.fantasy_team))].filter(t => t).sort();
+
+      const nbaMenu = document.getElementById('nbaMenu');
+      nbaMenu.innerHTML = '<div class="dropdown-item selected" data-value="All">All</div>' +
+        nbaTeams.map(t => `<div class="dropdown-item" data-value="${t}">${t}</div>`).join('');
+
+      const fantasyMenu = document.getElementById('fantasyMenu');
+      fantasyMenu.innerHTML = '<div class="dropdown-item selected" data-value="All">All</div>' +
+        fantasyTeams.map(t => `<div class="dropdown-item" data-value="${t}">${t}</div>`).join('');
+    }
+    setupDropdown('nbaToggle', 'nbaMenu', selectedNbaTeams, updateDisplay);
+    setupDropdown('fantasyToggle', 'fantasyMenu', selectedFantasyTeams, updateDisplay);
+    setupDropdown('positionToggle', 'positionMenu', selectedPositions, updateDisplay);
+
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('show'));
+    });
+    // Update display
+    function updateDisplay() {
+      const daysBack = parseInt(document.getElementById('daysBack').value) || 7;
+      const processed = processData(rawStats, daysBack, currentRankBy);
+      renderTable(processed);
+    }
+    function setupDropdown(toggleId, menuId, selectedArray, updateCallback) {
+      const toggle = document.getElementById(toggleId);
+      const menu = document.getElementById(menuId);
+
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        document.querySelectorAll('.dropdown-menu').forEach(m => {
+          if (m !== menu) m.classList.remove('show');
+        });
+        menu.classList.toggle('show');
+      });
+
+      menu.addEventListener('click', (e) => {
+        if (e.target.classList.contains('dropdown-item')) {
+          e.stopPropagation();
+          const value = e.target.dataset.value;
+
+          if (value === 'All') {
+            selectedArray.length = 0;
+            selectedArray.push('All');
+            menu.querySelectorAll('.dropdown-item').forEach(item => {
+              item.classList.toggle('selected', item.dataset.value === 'All');
+            });
+          } else {
+            const allIdx = selectedArray.indexOf('All');
+            if (allIdx > -1) selectedArray.splice(allIdx, 1);
+
+            const idx = selectedArray.indexOf(value);
+            if (idx > -1) {
+              selectedArray.splice(idx, 1);
+            } else {
+              selectedArray.push(value);
+            }
+
+            if (selectedArray.length === 0) {
+              selectedArray.push('All');
+            }
+
+            e.target.classList.toggle('selected');
+            const allItem = menu.querySelector('[data-value="All"]');
+            if (allItem) allItem.classList.toggle('selected', selectedArray.includes('All'));
+          }
+
+          toggle.textContent = selectedArray.includes('All') ? 'All' :
+            selectedArray.length === 1 ? selectedArray[0] :
+              `${selectedArray.length} selected`;
+          updateCallback();
+        }
+      });
+    }
+    // Initialize
+    async function init() {
+      try {
+        // Load data
+        rawStats = await loadCSV('player_rater/data_2025-26.csv');
+        fantasyData = await loadCSV('Fantrax-Players-Walesi Printsessi Liiga.csv');
+
+        // Normalize names
+        rawStats = rawStats.map(r => ({
+          ...r,
+          player_name: normalizeName(r.player_name)
+        }));
+
+        // Merge with fantasy data
+        rawStats = mergeFantasyData(rawStats, fantasyData);
+
+        // Populate filters
+        populateFilters(rawStats);
+
+        // Initial render
+        updateDisplay();
+
+        // Set up event listeners
+        document.getElementById('playerSearch').addEventListener('input', updateDisplay);
+        document.getElementById('daysBack').addEventListener('change', updateDisplay);
+        document.getElementById('filterGP').addEventListener('input', updateDisplay);
+        document.getElementById('filterMin').addEventListener('input', updateDisplay);
+
+        // Rank by buttons
+        document.querySelectorAll('.btn-group .btn-toggle[data-value]').forEach(btn => {
+          btn.addEventListener('click', function () {
+            document.querySelectorAll('.btn-group .btn-toggle[data-value]').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            currentRankBy = this.dataset.value;
+            updateDisplay();
+          });
+        });
+
+        // Set initial active state
+        document.querySelector('.btn-toggle[data-value="Per Game"]').classList.add('active');
+
+        // Stats toggles
+        document.querySelectorAll('#statsToggles .btn-toggle').forEach(btn => {
+          btn.addEventListener('click', function () {
+            this.classList.toggle('active');
+            const stat = this.dataset.stat;
+            if (this.classList.contains('active')) {
+              if (!activeStats.includes(stat)) activeStats.push(stat);
+            } else {
+              activeStats = activeStats.filter(s => s !== stat);
+            }
+            updateDisplay();
+          });
+        });
+
+      } catch (error) {
+        console.error('Error initializing app:', error);
+        alert('Error loading data. Please check that the CSV files are in the correct location.');
+      }
+    }
+
+    // Start the app
+    init();
+  </script>
+</body>
+
+</html>
