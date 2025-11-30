@@ -11,30 +11,23 @@
   <style>
     body {
       font-family: "IBM Plex Mono", monospace;
-      padding: 20px;
+      padding: 5px;
       background-color: #f8f9fa;
-      transform: scale(0.7);
-      transform-origin: top left;
-      width: 142.86%;
-      /* 100 / 0.7 */
-      height: 142.86%;
+      font-size: 13px;
     }
 
     h1 {
       color: #333;
       margin-bottom: 20px;
+      font-size: 26px;
     }
 
     .controls-panel {
       background: white;
-      padding: 20px;
+      padding: 5px;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-    }
-
-    .control-group {
-      margin-bottom: 15px;
+      margin-bottom: 5px;
     }
 
     label {
@@ -87,6 +80,24 @@
       color: white !important;
     }
 
+    table.dataTable tbody th,
+    table.dataTable tbody td {
+      padding: 2px;
+    }
+
+    table.dataTable thead>tr>th.sorting {
+      padding-right: 18px !important;
+    }
+
+    table.dataTable tbody td {
+      text-align: center;
+    }
+
+    table.dataTable tbody td:nth-child(n+2):nth-child(-n+5) {
+      text-align: left;
+      white-space: nowrap;
+    }
+
     table.dataTable thead th {
       font-weight: bold;
       background: #f8f9fa;
@@ -109,7 +120,6 @@
 
     #table_wrapper {
       background: white;
-      padding: 20px;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
@@ -164,6 +174,13 @@
     .dropdown-item.selected {
       background: #007bff;
       color: white;
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+      color: white !important;
+      border: 1px solid #007bff;
+      background-color: #007bff;
+      background: #007bff;
     }
   </style>
 </head>
@@ -233,7 +250,7 @@
 
         <div class="col-md-1 control-group">
           <label for="filterMin">Filter Minutes:</label>
-          <input id="filterMin" type="number" min="0" placeholder="Min Minutes" />
+          <input id="filterMin" type="number" min="0" placeholder="Min MPG" />
         </div>
 
         <div class="col-md-9 control-group">
@@ -257,36 +274,36 @@
       <table id="table" class="display" style="width:100%">
         <thead>
           <tr>
-            <th rowspan="2">RK</th>
-            <th rowspan="2">Player</th>
-            <th rowspan="2">NBA</th>
-            <th rowspan="2">Fantasy</th>
-            <th rowspan="2">Position</th>
-            <th rowspan="2">GP</th>
-            <th rowspan="2">MPG</th>
-            <th colspan="9">Per Game Stats</th>
-            <th colspan="9">Adjusted Stats</th>
-            <th rowspan="2">Total</th>
+            <th rowspan="2">rk</th>
+            <th rowspan="2">player</th>
+            <th rowspan="2">nba</th>
+            <th rowspan="2">fantasy</th>
+            <th rowspan="2">position</th>
+            <th rowspan="2">gp</th>
+            <th rowspan="2">mpg</th>
+            <th colspan="9">per game stats</th>
+            <th colspan="9">adjusted stats</th>
+            <th rowspan="2">total</th>
           </tr>
           <tr>
-            <th>FG</th>
-            <th>FT</th>
-            <th>3PM</th>
-            <th>REB</th>
-            <th>AST</th>
-            <th>STL</th>
-            <th>BLK</th>
-            <th>TOV</th>
-            <th>PTS</th>
-            <th>FG</th>
-            <th>FT</th>
-            <th>3PM</th>
-            <th>REB</th>
-            <th>AST</th>
-            <th>STL</th>
-            <th>BLK</th>
-            <th>TOV</th>
-            <th>PTS</th>
+            <th>fg</th>
+            <th>ft</th>
+            <th>3pm</th>
+            <th>reb</th>
+            <th>ast</th>
+            <th>stl</th>
+            <th>blk</th>
+            <th>tov</th>
+            <th>pts</th>
+            <th>fg</th>
+            <th>ft</th>
+            <th>3pm</th>
+            <th>reb</th>
+            <th>ast</th>
+            <th>stl</th>
+            <th>blk</th>
+            <th>tov</th>
+            <th>pts</th>
           </tr>
         </thead>
         <tbody></tbody>
@@ -389,7 +406,44 @@
       let normalized = nameMap[name] || name;
       return normalized.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     }
-
+    const teamAbbr = {
+      "Atlanta Hawks": "ATL",
+      "Boston Celtics": "BOS",
+      "Brooklyn Nets": "BKN",
+      "Charlotte Hornets": "CHA",
+      "Chicago Bulls": "CHI",
+      "Cleveland Cavaliers": "CLE",
+      "Dallas Mavericks": "DAL",
+      "Denver Nuggets": "DEN",
+      "Detroit Pistons": "DET",
+      "Golden State Warriors": "GSW",
+      "Houston Rockets": "HOU",
+      "Indiana Pacers": "IND",
+      "LA Clippers": "LAC",
+      "Los Angeles Lakers": "LAL",
+      "Memphis Grizzlies": "MEM",
+      "Miami Heat": "MIA",
+      "Milwaukee Bucks": "MIL",
+      "Minnesota Timberwolves": "MIN",
+      "New Orleans Pelicans": "NOP",
+      "New York Knicks": "NYK",
+      "Oklahoma City Thunder": "OKC",
+      "Orlando Magic": "ORL",
+      "Philadelphia 76ers": "PHI",
+      "Phoenix Suns": "PHX",
+      "Portland Trail Blazers": "POR",
+      "Sacramento Kings": "SAC",
+      "San Antonio Spurs": "SAS",
+      "Toronto Raptors": "TOR",
+      "Utah Jazz": "UTA",
+      "Washington Wizards": "WAS"
+    };
+    function abbreviateName(name) {
+      if (name.length <= 15) return name;
+      const parts = name.split(' ');
+      if (parts.length < 2) return name;
+      return parts[0][0] + '. ' + parts.slice(1).join(' ');
+    }
     // Calculate z-scores using the elite player method from R
     function calculateZScores(data) {
       const players = 144; // Number of elite players to use for baseline
@@ -666,12 +720,10 @@
     // Get background color based on z-score
     function getZScoreColor(value) {
       const colors = [
-        '#a91b0c', '#d32f2f', '#e57373', '#ffcdd2',
+        '#8B0000', '#DC143C', '#FF6B6B', '#FFB3B3',
         'white',
-        '#c8e6c9', '#81c784', '#4caf50', 'forestgreen'
-      ];
-      const breakpoints = [-3.5, -2.5, -1.5, -0.5, 0.5, 1.5, 2.5, 3.5];
-
+        '#CCE5FF', '#80B3FF', '#3399FF', '#007bff'];
+      const breakpoints = [-3, -2, -1.5, -0.5, 0.5, 1.5, 2, 3];
       for (let i = 0; i < breakpoints.length; i++) {
         if (value < breakpoints[i]) return colors[i];
       }
@@ -683,8 +735,8 @@
       const tableData = filtered.map(row => {
         return [
           row.rk,
-          row.player_name,
-          row.nba,
+          abbreviateName(row.player_name),
+          teamAbbr[row.nba] || row.nba,
           row.fantasy,
           row.position,
           row.gp,
