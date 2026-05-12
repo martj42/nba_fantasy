@@ -1,0 +1,13 @@
+table.sortable th {
+    cursor: pointer;
+}
+
+.chart-title {
+	font-weight: bold;
+	color: #444444;
+}
+
+th {
+	color: #666;
+
+}
