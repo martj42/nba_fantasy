@@ -54,9 +54,9 @@
 
     .btn-toggle {
       padding: 6px 12px;
-      border: 1px solid #007bff;
+      border: 1px solid hsl(210, 3%, 55%);
       background: white;
-      color: #007bff;
+      color: hsl(210, 3%, 55%);
       cursor: pointer;
       border-radius: 4px;
       font-size: 0.85em;
@@ -64,19 +64,21 @@
     }
 
     .btn-toggle.active {
-      background: #007bff;
+      background: hsl(210, 3%, 55%);
       color: white;
     }
 
     .btn-toggle:hover {
-      background: #0056b3;
+      background: hsl(210, 3%, 55%);
       color: white;
-      border-color: #0056b3;
+      border-color: hsl(210, 3%, 55%);
+      color: white;
+      border-color: hsl(210, 3%, 55%);
     }
 
     table.dataTable tbody td.active,
     table.dataTable tbody tr.active td {
-      background-color: #a91b0c !important;
+      background-color: hsl(210, 3%, 55%) !important;
       color: white !important;
     }
 
@@ -172,15 +174,15 @@
     }
 
     .dropdown-item.selected {
-      background: #007bff;
+      background: hsl(210, 3%, 55%);
       color: white;
     }
 
     .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
       color: white !important;
-      border: 1px solid #007bff;
-      background-color: #007bff;
-      background: #007bff;
+      border: 1px solid hsl(210, 3%, 55%);
+      background-color: hsl(210, 3%, 55%);
+      background: hsl(210, 3%, 55%);
     }
   </style>
 </head>
@@ -320,7 +322,6 @@
   <script src="https://cdn.datatables.net/fixedheader/3.4.0/js/dataTables.fixedHeader.min.js"></script>
 
   <script>
-    // Global state
     let rawStats = [];
     let fantasyData = [];
     let dataTable = null;
@@ -329,7 +330,7 @@
     let selectedNbaTeams = ['All'];
     let selectedFantasyTeams = ['All'];
     let selectedPositions = ['All'];
-    // Utility: Load CSV
+
     async function loadCSV(url) {
       const res = await fetch(url, {
         cache: 'no-store',
@@ -346,7 +347,6 @@
       });
     }
 
-    // Handle CSV parsing with quoted values
     function parseCSVRow(row) {
       const result = [];
       let current = '';
@@ -367,7 +367,6 @@
       return result;
     }
 
-    // Normalize names
     function normalizeName(name) {
       if (!name) return '';
 
@@ -402,7 +401,8 @@
         "Rob Dillingham": "Robert Dillingham",
         "Royce ONeale": "Royce O'Neale",
         "Ron Holland": "Ronald Holland",
-        "Carlton Carrington": "Bub Carrington"
+        "Carlton Carrington": "Bub Carrington",
+        "Sergio De Larrea": "Sergio de Larrea"
 
       };
 
@@ -447,11 +447,9 @@
       if (parts.length < 2) return name;
       return parts[0][0] + '. ' + parts.slice(1).join(' ');
     }
-    // Calculate z-scores using the elite player method from R
     function calculateZScores(data) {
-      const players = 144; // Number of elite players to use for baseline
+      const players = 144;
 
-      // First pass: Calculate league average shooting percentages
       let totalFgm = 0, totalFga = 0, totalFtm = 0, totalFta = 0;
       data.forEach(row => {
         totalFgm += Number(row.fgm) || 0;
@@ -463,7 +461,6 @@
       const lgFg = totalFga > 0 ? totalFgm / totalFga : 0;
       const lgFt = totalFta > 0 ? totalFtm / totalFta : 0;
 
-      // Calculate initial fg and ft impact for ranking
       const withImpact = data.map(row => {
         const fga = Number(row.fga) || 0;
         const fta = Number(row.fta) || 0;
@@ -477,7 +474,6 @@
         };
       });
 
-      // Scale the impact stats to get initial z-scores
       const impactStats = ['pts', 'ast', 'reb', 'stl', 'blk', 'tov', 'fg3m', 'fg_impact', 'ft_impact'];
       const initialZScores = {};
 
@@ -494,7 +490,6 @@
         });
       });
 
-      // Calculate initial total to find elite players
       withImpact.forEach(row => {
         row.initial_total =
           row.pts_z +
@@ -508,12 +503,10 @@
           row.fg_impact_z;
       });
 
-      // Get top N elite players
       const sorted = [...withImpact].sort((a, b) => b.initial_total - a.initial_total);
       const eliteCount = Math.min(players, sorted.length);
       const elitePlayers = sorted.slice(0, eliteCount);
 
-      // Second pass: Calculate elite league averages
       totalFgm = 0;
       totalFga = 0;
       totalFtm = 0;
@@ -529,7 +522,6 @@
       const eliteLgFg = totalFga > 0 ? totalFgm / totalFga : 0;
       const eliteLgFt = totalFta > 0 ? totalFtm / totalFta : 0;
 
-      // Calculate elite means and standard deviations
       const regularStats = ['pts', 'ast', 'reb', 'tov', 'blk', 'stl', 'fg3m'];
       const eliteMeans = {};
       const eliteSds = {};
@@ -544,18 +536,15 @@
         eliteSds[stat] = std;
       });
 
-      // Final pass: Calculate z-scores for all players using elite baseline
       const final = withImpact.map(row => {
         const fga = Number(row.fga) || 0;
         const fta = Number(row.fta) || 0;
         const fgPct = fga > 0 ? (Number(row.fgm) || 0) / fga : 0;
         const ftPct = fta > 0 ? (Number(row.ftm) || 0) / fta : 0;
 
-        // Calculate FG and FT impact using elite league averages
         let fgImpact = fga > 0 ? (fgPct - eliteLgFg) * fga : 0;
         let ftImpact = fta > 0 ? (ftPct - eliteLgFt) * fta : 0;
 
-        // Scale FG and FT impacts
         const fgImpactValues = withImpact.map(r => {
           const a = Number(r.fga) || 0;
           const pct = a > 0 ? (Number(r.fgm) || 0) / a : 0;
@@ -574,7 +563,6 @@
 
         const result = { ...row };
 
-        // Calculate z-scores using elite baseline
         result.fg = fgImpactStd > 0 ? (fgImpact - fgImpactMean) / fgImpactStd : 0;
         result.ft = ftImpactStd > 0 ? (ftImpact - ftImpactMean) / ftImpactStd : 0;
         result.ast = eliteSds.ast > 0 ? ((Number(row.ast) || 0) - eliteMeans.ast) / eliteSds.ast : 0;
@@ -582,16 +570,14 @@
         result.reb = eliteSds.reb > 0 ? ((Number(row.reb) || 0) - eliteMeans.reb) / eliteSds.reb : 0;
         result.stl = eliteSds.stl > 0 ? ((Number(row.stl) || 0) - eliteMeans.stl) / eliteSds.stl : 0;
         result.blk = eliteSds.blk > 0 ? ((Number(row.blk) || 0) - eliteMeans.blk) / eliteSds.blk : 0;
-        result.tov = eliteSds.tov > 0 ? -((Number(row.tov) || 0) - eliteMeans.tov) / eliteSds.tov : 0; // Negative for turnovers
+        result.tov = eliteSds.tov > 0 ? -((Number(row.tov) || 0) - eliteMeans.tov) / eliteSds.tov : 0;
         result.fg3m = eliteSds.fg3m > 0 ? ((Number(row.fg3m) || 0) - eliteMeans.fg3m) / eliteSds.fg3m : 0;
 
-        // Cap z-scores at -3 to 3
         ['fg', 'ft', 'fg3m', 'reb', 'ast', 'stl', 'blk', 'tov', 'pts'].forEach(stat => {
           if (result[stat] > 3) result[stat] = 3;
           if (result[stat] < -3) result[stat] = -3;
         });
 
-        // Clean up temporary fields
         delete result.fg_impact;
         delete result.ft_impact;
         delete result.initial_total;
@@ -612,11 +598,13 @@
     }
 
     function processData(stats, daysBack, rankBy) {
-      const maxDate = new Date(Math.max(...stats.map(s => new Date(s.game_date))));
-      const minDate = new Date(maxDate);
-      minDate.setDate(minDate.getDate() - daysBack);
+      const maxDay = stats.reduce((m, s) => (s.game_date > m ? s.game_date : m), '');
 
-      const filtered = stats.filter(s => new Date(s.game_date) > minDate);
+      const cutoff = new Date(maxDay + 'T00:00:00Z');
+      cutoff.setUTCDate(cutoff.getUTCDate() - (daysBack - 1));
+      const minDay = cutoff.toISOString().slice(0, 10);
+
+      const filtered = stats.filter(s => s.game_date >= minDay);
 
       const grouped = {};
       filtered.forEach(row => {
@@ -639,14 +627,12 @@
         const stats = ['min', 'fgm', 'fga', 'ftm', 'fta', 'fg3m', 'reb', 'ast', 'stl', 'blk', 'tov', 'pts'];
         const result = { ...player };
 
-        // Always calculate per-game for display
         stats.forEach(stat => {
           const values = player.games.map(g => Number(g[stat]) || 0);
           const sum = values.reduce((a, b) => a + b, 0);
           result[`${stat}_pg`] = sum / player.gp;
         });
 
-        // Calculate stats for z-score calculation based on rankBy
         if (rankBy === 'Per Game') {
           stats.forEach(stat => {
             result[stat] = result[`${stat}_pg`];
@@ -657,13 +643,12 @@
             const sum = player.games.reduce((s, g) => s + (Number(g[stat]) || 0), 0);
             result[stat] = totalMin > 0 ? sum / totalMin : 0;
           });
-        } else { // Totals
+        } else {
           stats.forEach(stat => {
             result[stat] = player.games.reduce((sum, g) => sum + (Number(g[stat]) || 0), 0);
           });
         }
 
-        // Calculate shooting percentages for display (always per-game basis)
         result.fg_pct = result.fga_pg > 0 ? (result.fgm_pg / result.fga_pg * 100) : 0;
         result.ft_pct = result.fta_pg > 0 ? (result.ftm_pg / result.fta_pg * 100) : 0;
 
@@ -694,7 +679,6 @@
           const regex = new RegExp(search, 'i');
           filtered = filtered.filter(r => regex.test(r.player_name));
         } catch (e) {
-          // If invalid regex, fall back to simple string match
           filtered = filtered.filter(r => r.player_name.toLowerCase().includes(search));
         }
       }
@@ -726,12 +710,12 @@
       return filtered;
     }
 
-    // Get background color based on z-score
     function getZScoreColor(value) {
       const colors = [
-        '#8B0000', '#b7563f', '#de9682', '#ffd7cb',
-        'white',
-        '#dbe0ff', '#adbdff', '#779bff', '#007bff'];
+        '#b2182b', '#d6604d', '#f4a582', '#fddbc7',
+        '#f7f7f7',
+        '#d9f0d3', '#a6dba0', '#5aae61', '#1b7837'];
+
       const breakpoints = [-3, -2, -1.5, -0.5, 0.5, 1.5, 2, 3];
       for (let i = 0; i < breakpoints.length; i++) {
         if (value < breakpoints[i]) return colors[i];
@@ -792,21 +776,19 @@
         applyConditionalFormatting();
       }
     }
-    // Apply conditional formatting to z-score columns
-    function applyConditionalFormatting() {
-      if (!dataTable) return; // Add this safety check
 
-      const zScoreCols = [16, 17, 18, 19, 20, 21, 22, 23, 24]; // Adjusted z-score columns
+    function applyConditionalFormatting() {
+      if (!dataTable) return;
+
+      const zScoreCols = [16, 17, 18, 19, 20, 21, 22, 23, 24];
 
       dataTable.rows().every(function () {
         const row = this.node();
         const data = this.data();
 
-        // Bold player name and total
         $(row).find('td:eq(1)').addClass('bold-col');
         $(row).find('td:eq(25)').addClass('bold-col');
 
-        // Color z-score cells
         zScoreCols.forEach(colIdx => {
           const cell = $(row).find(`td:eq(${colIdx})`);
           const value = parseFloat(data[colIdx]);
@@ -818,13 +800,14 @@
       });
     }
 
-    // Merge fantasy data
     function mergeFantasyData(stats, fantasy) {
       const fantasyMap = new Map();
       fantasy.forEach(f => {
         const name = normalizeName(f.Player);
         fantasyMap.set(name, {
-          team: f.Status === 'FA' ? '(FA)' : f.Status,
+          team: f.Status === 'FA' ? '(FA)'
+            : f.Status === 'W <small>(Mon)</small>' ? '(W)'
+              : f.Status,
           position: (f.Position || '').replace(/,Flx/g, '').replace(/,F/g, '').replace(/,G/g, '')
         });
       });
@@ -836,7 +819,6 @@
       }));
     }
 
-    // Populate filter dropdowns
     function populateFilters(data) {
       const nbaTeams = [...new Set(data.map(d => d.team_name))].sort();
       const fantasyTeams = [...new Set(data.map(d => d.fantasy_team))].filter(t => t).sort();
@@ -856,7 +838,7 @@
     document.addEventListener('click', () => {
       document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('show'));
     });
-    // Update display
+
     function updateDisplay() {
       const daysBack = parseInt(document.getElementById('daysBack').value) || 7;
       const processed = processData(rawStats, daysBack, currentRankBy);
@@ -912,35 +894,31 @@
         }
       });
     }
-    // Initialize
+
     async function init() {
       try {
-        // Load data
+
         rawStats = await loadCSV('player_rater/data_2026-27.csv');
         fantasyData = await loadCSV('Fantrax-Players-Hotel Motel Holiday Inn Liiga.csv');
 
-        // Normalize names
+        fantasyData = fantasyData.filter(p => p.Team !== '(N/A)');
+
         rawStats = rawStats.map(r => ({
           ...r,
           player_name: normalizeName(r.player_name)
         }));
 
-        // Merge with fantasy data
         rawStats = mergeFantasyData(rawStats, fantasyData);
 
-        // Populate filters
         populateFilters(rawStats);
 
-        // Initial render
         updateDisplay();
 
-        // Set up event listeners
         document.getElementById('playerSearch').addEventListener('input', updateDisplay);
         document.getElementById('daysBack').addEventListener('change', updateDisplay);
         document.getElementById('filterGP').addEventListener('input', updateDisplay);
         document.getElementById('filterMin').addEventListener('input', updateDisplay);
 
-        // Rank by buttons
         document.querySelectorAll('.btn-group .btn-toggle[data-value]').forEach(btn => {
           btn.addEventListener('click', function () {
             document.querySelectorAll('.btn-group .btn-toggle[data-value]').forEach(b => b.classList.remove('active'));
@@ -950,10 +928,8 @@
           });
         });
 
-        // Set initial active state
         document.querySelector('.btn-toggle[data-value="Per Game"]').classList.add('active');
 
-        // Stats toggles
         document.querySelectorAll('#statsToggles .btn-toggle').forEach(btn => {
           btn.addEventListener('click', function () {
             this.classList.toggle('active');
@@ -973,7 +949,6 @@
       }
     }
 
-    // Start the app
     init();
   </script>
 </body>
